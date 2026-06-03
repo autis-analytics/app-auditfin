@@ -10,6 +10,7 @@ import { getMessages } from 'next-intl/server'
 import { ThemeProvider } from '@/components/ui/theme-provider'
 import DocumentsPanel from '@/components/my-components/documents-panel'
 import Footer from '@/components/my-components/footer'
+import GoogleAnalytics from '@/components/my-components/google-analytics'
 // import Footer from '@/components/my-components/footer'
 
 const roboto = Roboto({
@@ -79,6 +80,7 @@ const RootLayout = async ({
         {/* Botão/Seção de Documentos fora da rolagem */}
         <DocumentsPanel />
         <Footer />
+        <GoogleAnalytics />
       </body>
     </html>
   )
