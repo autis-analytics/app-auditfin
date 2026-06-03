@@ -1,0 +1,289 @@
+{
+  "metadata": {
+    "siteName": "Auditoría Financiera AJRI",
+    "siteDescription": "Acuerdo Judicial de Reparación Integral - Auditoría Financiera"
+  },
+
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error al cargar",
+    "back": "Volver",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "close": "Cerrar",
+    "open": "Abrir",
+    "readMore": "Leer más",
+    "showLess": "Mostrar menos"
+  },
+
+  "navigation": {
+    "openDocument": "Abrir AJRI",
+    "home": "Inicio",
+    "audit4411": "Cláusula 4.4.11",
+    "auditVale": "Obligaciones Vale",
+    "about": "Sobre",
+    "faq": "Preguntas Frecuentes",
+    "terms-of-use": "Términos de Uso",
+    "privacy": "Política de Privacidad"
+  },
+
+  "header": {
+    "title": "Auditoría Financiera",
+    "subtitle": "Acuerdo Judicial de Reparación Integral"
+  },
+
+  "pages": {
+    "home": {
+      "hero": {
+        "title": "Auditoría Financiera",
+        "subtitle": "Acuerdo Judicial de Reparación Integral"
+      },
+
+      "sections": {
+        "agreement": {
+          "tag": "Acuerdo",
+          "title": "El Acuerdo de Reparación",
+          "content": {
+            "paragraph1": "El 25 de enero de 2019 ocurrió la Rotura de las Represas B-I, B-IV y B-IVA, de la Mina Córrego do Feijão, en el municipio de Brumadinho, pertenecientes al Complejo Minero Paraopeba II – Mina Córrego do Feijão, de responsabilidad de Vale S.A., que provocó daños a derechos individuales, colectivos y difusos, afectando intereses públicos y privados.",
+            "paragraph2": "Ante esto, el 4 de febrero de 2021 se homologó el Acuerdo Judicial para la Reparación Integral Relativa a la Rotura de las Represas B-I, B-IV y B-IVA / Córrego do Feijão entre Vale y los Compromitentes (\"AJRI\") \"con el objetivo de la reparación integral de los daños, impactos negativos y perjuicios socioambientales y socioeconómicos causados como consecuencia de la Rotura, y sus desdoblamientos, conforme a la solución y adecuación técnicas definidas para cada situación\"."
+          }
+        },
+
+        "project": {
+          "tag": "Proyecto",
+          "title": "El Proyecto",
+          "content": {
+            "introduction": "El proyecto de Auditoría Financiera es fruto del Acuerdo Judicial para la Reparación Integral Relativa a la Rotura de las Represas B I, B IV y B IV-A / Córrego do Feijão (\"AJRI\") y abarca dos alcances generales de actuación:",
+            "scope1": "Auditoría Independiente de las Obligaciones Especificadas en la cláusula 4.4.11 del Acuerdo Judicial;",
+            "scope2": "Auditoría de las obligaciones de pago de Vale, previstas en las Cláusulas 4.4.3.1, 4.4.6, 4.4.7, 4.4.8, 4.4.10, 4.4.13 del Acuerdo Judicial de Reparación, así como obligaciones de hacer de Vale S.A que puedan convertirse en obligaciones de pago a lo largo de la ejecución del Acuerdo Judicial de Reparación;",
+            "callToAction": "Para saber más, seleccione cada uno de los alcances."
+          }
+        },
+
+        "limitations": {
+          "tag": "Límites",
+          "title": "Límites de Actuación",
+          "content": {
+            "description": "El AJRI prevé la actuación de una auditoría socioeconómica y otra ambiental en la cual las actividades no están dentro del alcance de actuación de EY. Ante lo expuesto, la información aquí presentada se restringe a las actividades informadas anteriormente, como alcance de este Proyecto."
+          }
+        }
+      }
+    },
+
+    "audit4411": {
+      "tag": "Obligaciones Especificadas",
+      "title": "Auditoría Independiente de las Obligaciones Especificadas en la cláusula 4.4.11 del Acuerdo Judicial",
+      "content": {
+        "introduction": {
+          "paragraph1": "Conforme previsto en la cláusula 4.4.11 del Acuerdo: La cantidad de R$ 700.000.000,00 (setecientos millones de reales) será destinada a la contratación de estructuras de apoyo, incluidas auditorías y asesorías técnicas independientes. En caso de no utilización de estos valores, el saldo remanente se utilizará conforme decisión de los compromitentes.",
+          "paragraph2": "En el contexto de esta cláusula EY ejecuta los siguientes alcances:"
+        },
+
+        "scopes": {
+          "overview": {
+            "tag": "Panorama",
+            "title": "Panorama de la Cláusula 4.4.11 – R$ 700 millones:",
+            "description": "Análisis de la regularidad de los valores pagados por Vale S.A. desde la fecha de firma del Acuerdo, en febrero de 2021, para la contratación de estructuras de apoyo, auditorías y asesorías técnicas independientes; Control financiero de los valores pagados y por pagar referente al valor global de R$700 millones, con fines de control de flujo de caja y evaluación de los contratos a ser definidos para estructuras de apoyo eventualmente contratadas por VALE."
+          },
+
+          "accountability": {
+            "tag": "Rendición de Cuentas",
+            "title": "Auditoría de la Rendición de Cuentas mensual de las ATIs y CAMF:",
+            "description": "Análisis del cumplimiento del plan de trabajo definido por las Instituciones de Justicia; adecuación de los gastos en relación con los objetivos propuestos y control financiero, análisis de la rendición de cuentas mensual presentada por las tres Asesorías Técnicas Independientes elegidas por las Comunidades integrantes de las 5 Regiones predeterminadas."
+          }
+        }
+      }
+    },
+
+    "overviewClause4411700Million": {
+      "title": "Panorama de la Cláusula 4.4.11 – R$ 700 millones",
+      "content": [
+        "En esta línea de trabajo EY realiza el seguimiento de los valores relacionados con la cláusula 4.4.11, así como el recálculo del saldo a partir de lo previsto en la cláusula 4.6 del Acuerdo, que dispone que:",
+        "Los valores previstos en este Acuerdo, salvo disposición expresa en contrario, serán corregidos monetariamente por la variación del Índice Nacional de Precios al Consumidor Amplio - IPCA, u otro índice que lo sustituya, verificada entre la fecha de homologación de este Acuerdo y su respectivo pago.",
+        "Hasta el momento se han identificado pagos relacionados con las siguientes partes:",
+        [
+          {
+            "title": "ATIS",
+            "description": "Composición de los valores recibidos por las ATIs según lo verificado en los extractos bancarios de las entidades."
+          },
+          {
+            "title": "CAMF",
+            "description": "Valores recibidos por la CAMF según lo verificado en los extractos bancarios de la Coordinación."
+          },
+          {
+            "title": "Auditorías",
+            "description": "Valores recibidos por la Auditoría Socioeconómica y Auditoría Financiera, verificados a partir de los boletines de medición y comprobantes bancarios."
+          }
+        ],
+        "Se destaca que, de acuerdo con el Oficio emitido el 16 de noviembre de 2022, el aporte destinado al Proceso no debe ser descontado de los R$ 700.000.000,00 previstos en la cláusula 4.4.11 del Acuerdo. Sin embargo, considerando que la discusión sobre el origen de los recursos para pagar los diferentes gastos de la ATI 'del Acuerdo' y 'del Proceso' aún está en discusión judicial, sin decisión definitiva con sentencia firme, los gastos del proceso también fueron considerados como recursos del ítem 4.4.11."
+      ]
+    },
+
+    "auditVale": {
+      "title": "Auditoría Obligaciones Vale",
+      "content": {
+        "description": "Contenido sobre auditoría de las obligaciones de Vale"
+      }
+    },
+
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "questions": []
+    },
+
+    "terms": {
+      "title": "Términos de Uso",
+      "lastUpdate": "Última actualización: {date}"
+    }
+  },
+
+  "comp3": {
+    "title": "Auditoría de la Rendición de Cuentas mensual de las ATIs y CAMF",
+    "content": {
+      "paragraph1": "En audiencia judicial realizada el 20/02/2019, se determinó la obligatoriedad de que la Compañía Vale S/A financie la contratación de entidades que prestarán servicios de Asesoría Técnica Independiente multidisciplinaria a las comunidades afectadas por la rotura.",
+      "paragraph2": "El Ministerio Público del Estado de Minas Gerais (MPMG), el Ministerio Público Federal (MPF), la Defensoría Pública del Estado de Minas Gerais (DPMG) y la Defensoría Pública de la Unión (DPU) (\"Instituciones de Justicia\") realizaron la convocatoria pública de entidades sin fines de lucro interesadas en la prestación de asesoría técnica independiente a las personas afectadas por la rotura de la Represa B-I y el soterramiento de las Represas B-IV y B-IV A de la Mina Córrego do Feijão, ocurrido en Brumadinho/MG (\"Rotura\").",
+      "paragraph3": "Para ello, se elaboró el Edicto de Convocatoria Pública y el respectivo Término de Referencia, que fueron la base para el proceso de selección de las entidades. Tras las inscripciones, las Instituciones de Justicia realizaron la acreditación de las entidades y posteriormente cada entidad se presentó a la región en la cual se inscribió.",
+      "paragraph4": "La entidad que prestará el servicio de Asesoría Técnica Independiente (ATI) fue elegida mediante votos de los integrantes de las comisiones de personas/comunidades afectadas de cada región. Una vez elegida, la entidad de Asesoría Técnica elaboró el Plan de Trabajo y la Planilla de Presupuesto Detallado (\"Plan de Trabajo\").",
+      "paragraph5": "El 17 de julio de 2023 se firmó una nueva versión del Término de Compromiso en el marco del Acuerdo Judicial para la Reparación Integral de los Daños colectivos relativos a la rotura de las Represas B-I, B-IV y B-IVA/ Córrego do Feijão, firmado entre las Instituciones de Justicia, Asesorías Técnicas Independientes y Coordinación de Acompañamiento Metodológico y Finalístico.",
+      "paragraph6": "Las ATIs prestarán apoyo y orientación a las personas afectadas en el proceso de reparación del Acuerdo Judicial, por un período de 30 meses, y sin perjuicio de la participación y del acceso directo de las personas afectadas a los órganos judiciales y administrativos, con vistas a dicha reparación integral, debiendo prestarse, como mínimo, los siguientes alcances:"
+    },
+    "scopes": {
+      "title": "Alcances",
+      "items": [
+        {
+          "title": "1",
+          "description": "Apoyo técnico y organizativo en la definición de los proyectos de interés de las comunidades, en el marco del Anexo I.1"
+        },
+        {
+          "title": "2",
+          "description": "Apoyo en la participación de las comunidades autorreconocidas como Pueblos y Comunidades Tradicionales (PCTs) contempladas con proyectos, en el marco de las etapas derivadas de la Consulta Popular específica"
+        },
+        {
+          "title": "3",
+          "description": "Apoyo a la participación informada de las personas afectadas, en la defensa y garantía de sus derechos respecto a la ejecución y cumplimiento de los términos del Acuerdo Judicial y sus respectivos anexos"
+        }
+      ]
+    },
+    "regions": {
+      "description": "Las Asesorías Técnicas actúan en 26 territorios, distribuidos en 5 regiones.",
+      "items": [
+        {
+          "title": "Región 1",
+          "description": "Brumadinho"
+        },
+        {
+          "title": "Región 2",
+          "description": "Betim, Igarapé, Juatuba, Mário Campos y São Joaquim de Bicas"
+        },
+        {
+          "title": "Región 3",
+          "description": "Caetanópolis, Esmeraldas, Florestal, Fortuna de Minas, Maravilhas, Papagaios, Pará de Minas, Paraopeba, Pequi y São José da Varginha"
+        },
+        {
+          "title": "Región 4",
+          "description": "Curvelo y Pompéu"
+        },
+        {
+          "title": "Región 5",
+          "description": "Abaeté, Biquinhas, Felixlândia, Martinho Campos, Morada Nova de Minas, Paineiras, São Gonçalo do Abaeté y Três Marias"
+        }
+      ]
+    }
+  },
+
+  "comp3n1": {
+    "title": "Papeles y responsabilidades de cada parte en el marco de este proyecto",
+    "tabs": {
+      "compromitentes": {
+        "label": "Compromitentes",
+        "content": {
+          "paragraph1": "Los compromitentes son responsables de evaluar, acompañar y solicitar que las Asesorías Técnicas Independientes (ATIs) realicen eventuales modificaciones necesarias en los Planes de Trabajo, contando para ello con el apoyo de la Coordinación de Acompañamiento Metodológico y Finalístico (CAMF).",
+          "paragraph2": "Adicionalmente, corresponde a los Compromitentes evaluar los resultados presentados por EY en los informes."
+        }
+      },
+      "atis": {
+        "label": "ATIs",
+        "content": {
+          "paragraph1": "Las Asesorías Técnicas Independientes (ATIs) son responsables de la adecuada elaboración de la información relacionada con los gastos efectuados, los cuales fueron elaborados de acuerdo con las premisas establecidas en el Término de Compromiso, celebrado entre la CAMF, las ATIs y el Ministerio Público del Estado de Minas Gerais (MPMG), el Ministerio Público Federal (MPF), la Defensoría Pública del Estado de Minas Gerais (DPMG) y la Defensoría Pública de la Unión (DPU), colectivamente denominadas como (\"Instituciones de Justicia o Compromitentes\").",
+          "paragraph2": "Corresponde además a la administración de la ATI la implementación de los controles internos que determine como necesarios para permitir que la información esté libre de distorsiones relevantes, independientemente de si son causadas por error o fraude.",
+          "paragraph3": "La responsabilidad por los gastos, su clasificación, asignación, así como la salvaguarda de los documentos que respaldan el uso adecuado de los recursos recibidos, teniendo en cuenta su finalidad, recae en la administración de la ATI.",
+          "paragraph4": "Adicionalmente, la ATI es responsable de realizar la clasificación manual de las transacciones presentadas en la Relación de Pagos, considerando la rúbrica de las mismas conforme al Plan de Trabajo."
+        }
+      },
+      "camf": {
+        "label": "CAMF",
+        "content": {
+          "paragraph1": "La Coordinación de Acompañamiento Metodológico y Finalístico (CAMF) es responsable de acompañar, monitorear y evaluar los Planes de Trabajo de las Asesorías Técnicas Independientes (ATIs) conforme a los términos del Acuerdo Judicial celebrado el 4 de febrero de 2021, en la atención a las comunidades afectadas por la rotura de la Represa B-I y el soterramiento de las Represas B-IV y IV-A, promoviendo la alineación técnica, metodológica y financiera entre las entidades, con el objetivo de transparencia y buen uso de los recursos."
+        }
+      },
+      "auditoria": {
+        "label": "Auditoría Financiera",
+        "content": {
+          "paragraph1": "EY es responsable de realizar una evaluación de forma muestral, sobre los gastos presentados conforme a la documentación de respaldo proporcionada por la ATI en el marco del TC, mediante los extractos bancarios y la Relación de Pagos mensual.",
+          "paragraph2": "Este trabajo implica la ejecución de procedimientos seleccionados para obtener evidencia adecuada y suficiente de que los gastos presentados por la ATI están de acuerdo con lo establecido en el Término de Compromiso, el Plan de Trabajo y demás documentación pertinente."
+        }
+      }
+    }
+  },
+
+  "errors": {
+    "404": {
+      "title": "Página no encontrada",
+      "description": "La página que buscas no existe.",
+      "action": "Volver al inicio"
+    },
+    "500": {
+      "title": "Error interno",
+      "description": "Ocurrió un error inesperado. Intenta nuevamente más tarde.",
+      "action": "Recargar página"
+    },
+    "generic": {
+      "title": "Algo salió mal",
+      "description": "No fue posible completar tu solicitud.",
+      "action": "Intentar nuevamente"
+    }
+  },
+
+  "accessibility": {
+    "skipToContent": "Saltar al contenido",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "expandSection": "Expandir sección",
+    "collapseSection": "Colapsar sección"
+  },
+
+  "forms": {
+    "validation": {
+      "required": "Este campo es obligatorio",
+      "email": "Introduce un correo electrónico válido",
+      "minLength": "Mínimo de {min} caracteres",
+      "maxLength": "Máximo de {max} caracteres"
+    },
+    "actions": {
+      "submit": "Enviar",
+      "cancel": "Cancelar",
+      "save": "Guardar",
+      "delete": "Eliminar",
+      "edit": "Editar"
+    }
+  },
+
+  "notifications": {
+    "success": {
+      "title": "Éxito",
+      "generic": "Operación realizada con éxito"
+    },
+    "error": {
+      "title": "Error",
+      "generic": "Ocurrió un error al procesar tu solicitud"
+    },
+    "warning": {
+      "title": "Atención",
+      "generic": "Por favor, verifica la información"
+    },
+    "info": {
+      "title": "Información",
+      "generic": "Información importante"
+    }
+  }
+}

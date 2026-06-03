@@ -1,0 +1,269 @@
+{
+  "metadata": {
+    "siteName": "AJRI Financial Audit",
+    "siteDescription": "Judicial Agreement for Integral Reparation - Financial Audit"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error loading",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "open": "Open",
+    "readMore": "Read more",
+    "showLess": "Show less"
+  },
+  "navigation": {
+    "openDocument": "Open AJRI",
+    "home": "Home",
+    "audit4411": "Clause 4.4.11",
+    "auditVale": "Vale Obligations",
+    "about": "About",
+    "faq": "FAQ",
+    "terms-of-use": "Terms of Use",
+    "privacy": "Privacy Policy"
+  },
+  "header": {
+    "title": "Financial Audit",
+    "subtitle": "Judicial Agreement for Integral Reparation"
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "title": "Financial Audit",
+        "subtitle": "Judicial Agreement for Integral Reparation"
+      },
+      "sections": {
+        "agreement": {
+          "tag": "Agreement",
+          "title": "The Reparation Agreement",
+          "content": {
+            "paragraph1": "On January 25, 2019, the B-I, B-IV and B-IVA dams at Mina Córrego do Feijão, in the municipality of Brumadinho, part of the Paraopeba II Mining Complex – Mina Córrego do Feijão and under the responsibility of Vale S.A., failed (\"Rompimento\"), causing damage to individual, collective, and diffuse rights, affecting public and private interests.",
+            "paragraph2": "Accordingly, on February 4, 2021, the Judicial Agreement for Integral Reparation related to the failure of the B-I, B-IV and B-IVA dams / Córrego do Feijão (\"AJRI\") was ratified between Vale and the signatories, \"aiming at the full reparation of the damage, negative impacts and socio-environmental and socio-economic losses caused as a result of the failure and its consequences, according to the technical solution and suitability defined for each situation.\""
+          }
+        },
+        "project": {
+          "tag": "Project",
+          "title": "The Project",
+          "content": {
+            "introduction": "The Financial Audit project results from the Judicial Agreement for Integral Reparation related to the failure of the B I, B IV and B IV-A dams / Córrego do Feijão (\"AJRI\") and covers two general scopes of work:",
+            "scope1": "Independent Audit of the Obligations specified in clause 4.4.11 of the Judicial Agreement;",
+            "scope2": "Audit of Vale’s payment obligations provided for in clauses 4.4.3.1, 4.4.6, 4.4.7, 4.4.8, 4.4.10, 4.4.13 of the Reparation Agreement, as well as Vale S.A.’s obligations to do that may be converted into payment obligations during the execution of the Reparation Agreement;",
+            "callToAction": "To learn more, select each scope."
+          }
+        },
+        "limitations": {
+          "tag": "Limits",
+          "title": "Scope of Work Limits",
+          "content": {
+            "description": "The AJRI provides for a socio-economic audit and an environmental audit whose activities are not within EY’s scope. Therefore, the information presented here is limited to the activities informed earlier as the scope of this Project."
+          }
+        }
+      }
+    },
+    "audit4411": {
+      "tag": "Specified Obligations",
+      "title": "Independent Audit of the Obligations specified in clause 4.4.11 of the Judicial Agreement",
+      "content": {
+        "introduction": {
+          "paragraph1": "As provided in clause 4.4.11 of the Agreement: The amount of R$ 700,000,000.00 (seven hundred million reais) will be allocated to contracting support structures, including independent audits and technical advisors. If these amounts are not used, the remaining balance will be used as decided by the signatories.",
+          "paragraph2": "In the context of this clause, EY carries out the following scopes:"
+        },
+        "scopes": {
+          "overview": {
+            "tag": "Overview",
+            "title": "Overview of Clause 4.4.11 – R$ 700 million:",
+            "description": "Analysis of the regularity of the amounts paid by Vale S.A. since the date the Agreement was signed, in February 2021, for contracting support structures, audits and independent technical advisors; financial control of amounts paid and payable with respect to the global amount of R$700 million, for cash-flow control purposes and evaluation of contracts to be defined for support structures eventually contracted by VALE."
+          },
+          "accountability": {
+            "tag": "Accountability",
+            "title": "Audit of the monthly reporting by the ATIs and CAMF:",
+            "description": "Analysis of compliance with the work plan defined by the Justice Institutions; appropriateness of expenditures in relation to the proposed objectives and financial control; analysis of the monthly reporting submitted by the three Independent Technical Advisory teams chosen by the Communities that make up the 5 predetermined Regions."
+          }
+        }
+      }
+    },
+    "overviewClause4411700Million": {
+      "title": "Overview of Clause 4.4.11 – R$ 700 million",
+      "content": [
+        "In this workstream EY monitors the amounts related to clause 4.4.11, as well as recalculates the balance pursuant to clause 4.6 of the Agreement, which provides that:",
+        "The amounts provided for in this Agreement, except where expressly stated otherwise, will be adjusted for inflation by the variation of the Índice Nacional de Preços ao Consumidor Amplo (IPCA), or another index that may replace it, measured between the date of ratification of this Agreement and its respective payment.",
+        "To date, payments related to the following parties have been identified:",
+        [
+          {
+            "title": "ATIs",
+            "description": "Breakdown of the amounts received by the ATIs as verified in the entities’ bank statements."
+          },
+          {
+            "title": "CAMF",
+            "description": "Amounts received by the CAMF as verified in the Coordination’s bank statements."
+          },
+          {
+            "title": "Audits",
+            "description": "Amounts received by the Socio-economic Audit and the Financial Audit, verified based on progress reports and bank receipts."
+          }
+        ],
+        "It should be noted that, according to the official letter issued on November 16, 2022, the contribution allocated to the legal proceeding (\"Processo\") should not be deducted from the R$ 700,000,000.00 provided for in clause 4.4.11 of the Agreement. However, considering that the discussion about the source of funds to pay the different expenses of the ATI 'from the Agreement' and 'from the Process' is still under judicial discussion, without a final and unappealable decision, the process expenses were also considered as resources under item 4.4.11."
+      ]
+    },
+    "auditVale": {
+      "title": "Audit of Vale’s Obligations",
+      "content": {
+        "description": "Content regarding the audit of Vale’s obligations"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": []
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "lastUpdate": "Last updated: {date}"
+    }
+  },
+  "comp3": {
+    "title": "Audit of the monthly reporting by the ATIs and CAMF",
+    "content": {
+      "paragraph1": "In a court hearing held on 02/20/2019, Vale S.A. was required to fund the hiring of entities that will provide multidisciplinary Independent Technical Advisory (ATI) services to the communities affected by the failure.",
+      "paragraph2": "The Ministério Público do Estado de Minas Gerais (MPMG), the Ministério Público Federal (MPF), the Defensoria Pública do Estado de Minas Gerais (DPMG) and the Defensoria Pública da União (DPU) (the \"Justice Institutions\") conducted a public call for nonprofit entities interested in providing independent technical advisory services to people affected by the failure of the B-I dam and burial of the B-IV and B-IV A dams at Mina Córrego do Feijão, in Brumadinho/MG (\"Rompimento\").",
+      "paragraph3": "To this end, a Public Call Notice and the respective Terms of Reference were prepared, which served as the basis for the process of selecting the entities. After applications, the Justice Institutions accredited the entities and subsequently each entity presented itself to the region for which it registered.",
+      "paragraph4": "The entity that will provide the Independent Technical Advisory (ATI) service was elected through votes from members of the commissions of people/communities affected in each region. Once chosen, the Technical Advisory entity prepared the Work Plan and Detailed Budget Spreadsheet (\"Work Plan\").",
+      "paragraph5": "On July 17, 2023, a new version of the Term of Commitment was signed within the scope of the Judicial Agreement for Integral Reparation of the collective damages related to the failure of the B-I, B-IV and B-IVA dams / Córrego do Feijão, signed between the Justice Institutions, Independent Technical Advisory (ATI) teams and the Coordination for Methodological and Finalistic Monitoring (CAMF).",
+      "paragraph6": "The ATIs will provide support and guidance to affected people in the reparation process under the Judicial Agreement, for a period of 30 months, without prejudice to the participation and direct access of affected people to judicial and administrative bodies, aiming at full reparation, and must provide at least the following scopes:"
+    },
+    "scopes": {
+      "title": "Scopes",
+      "items": [
+        {
+          "title": "1",
+          "description": "Technical and organizational support in defining projects of interest to the communities, within Annex I.1"
+        },
+        {
+          "title": "2",
+          "description": "Support for the participation of communities self-recognized as Traditional Peoples and Communities (PCTs) included with projects, within the stages arising from the specific Popular Consultation"
+        },
+        {
+          "title": "3",
+          "description": "Support for the informed participation of affected people, in defending and ensuring their rights regarding the execution and compliance with the terms of the Judicial Agreement and its respective annexes"
+        }
+      ]
+    },
+    "regions": {
+      "description": "The Technical Advisory teams operate in 26 territories, distributed across 5 regions.",
+      "items": [
+        {
+          "title": "Region 1",
+          "description": "Brumadinho"
+        },
+        {
+          "title": "Region 2",
+          "description": "Betim, Igarapé, Juatuba, Mário Campos and São Joaquim de Bicas"
+        },
+        {
+          "title": "Region 3",
+          "description": "Caetanópolis, Esmeraldas, Florestal, Fortuna de Minas, Maravilhas, Papagaios, Pará de Minas, Paraopeba, Pequi and São José da Varginha"
+        },
+        {
+          "title": "Region 4",
+          "description": "Curvelo and Pompéu"
+        },
+        {
+          "title": "Region 5",
+          "description": "Abaeté, Biquinhas, Felixlândia, Martinho Campos, Morada Nova de Minas, Paineiras, São Gonçalo do Abaeté and Três Marias"
+        }
+      ]
+    }
+  },
+  "comp3n1": {
+    "title": "Roles and responsibilities of each party within the scope of this project",
+    "tabs": {
+      "compromitentes": {
+        "label": "Commitment Parties",
+        "content": {
+          "paragraph1": "The Commitment Parties are responsible for evaluating, monitoring, and requesting that the Independent Technical Advisory teams (ATIs) make any necessary modifications to the Work Plans, with the support of the Coordination for Methodological and Finalistic Monitoring (CAMF).",
+          "paragraph2": "Additionally, it is the responsibility of the Commitment Parties to evaluate the results presented by EY in the reports."
+        }
+      },
+      "atis": {
+        "label": "ATIs",
+        "content": {
+          "paragraph1": "The Independent Technical Advisory teams (ATIs) are responsible for the proper preparation of information related to the expenditures incurred, which were prepared in accordance with the premises established in the Term of Commitment, signed between CAMF, the ATIs, and the Ministério Público do Estado de Minas Gerais (MPMG), the Ministério Público Federal (MPF), the Defensoria Pública do Estado de Minas Gerais (DPMG), and the Defensoria Pública da União (DPU), collectively referred to as (\"Justice Institutions or Commitment Parties\").",
+          "paragraph2": "It is also the responsibility of the ATI’s management to implement internal controls deemed necessary to ensure that the information is free from material misstatements, whether caused by error or fraud.",
+          "paragraph3": "The responsibility for the expenditures, their classification, allocation, as well as the safeguarding of documents that support the proper use of the resources received for their intended purpose, lies with the ATI’s management.",
+          "paragraph4": "Additionally, the ATI is responsible for manually classifying the transactions listed in the Payment Report, considering their category according to the Work Plan."
+        }
+      },
+      "camf": {
+        "label": "CAMF",
+        "content": {
+          "paragraph1": "The Coordination for Methodological and Finalistic Monitoring (CAMF) is responsible for following, monitoring, and evaluating the Work Plans of the Independent Technical Advisory teams (ATIs) according to the terms of the Judicial Agreement signed on February 4, 2021, in serving the communities affected by the failure of the B-I Dam and the burial of the B-IV and IV-A Dams, promoting technical, methodological, and financial alignment among the entities, aiming for transparency and the proper use of resources."
+        }
+      },
+      "auditoria": {
+        "label": "Financial Audit",
+        "content": {
+          "paragraph1": "EY is responsible for performing a sample-based assessment of the expenditures presented, according to the supporting documentation provided by the ATI under the Term of Commitment, through bank statements and the monthly Payment Report.",
+          "paragraph2": "This work involves carrying out selected procedures to obtain adequate and sufficient evidence that the expenditures presented by the ATI comply with the Term of Commitment, the Work Plan, and other relevant documentation."
+        }
+      }
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Page not found",
+      "description": "The page you are looking for does not exist.",
+      "action": "Back to home"
+    },
+    "500": {
+      "title": "Internal error",
+      "description": "An unexpected error has occurred. Please try again later.",
+      "action": "Reload page"
+    },
+    "generic": {
+      "title": "Something went wrong",
+      "description": "We were unable to complete your request.",
+      "action": "Try again"
+    }
+  },
+  "accessibility": {
+    "skipToContent": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "expandSection": "Expand section",
+    "collapseSection": "Collapse section"
+  },
+  "forms": {
+    "validation": {
+      "required": "This field is required",
+      "email": "Enter a valid email",
+      "minLength": "Minimum of {min} characters",
+      "maxLength": "Maximum of {max} characters"
+    },
+    "actions": {
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "save": "Save",
+      "delete": "Delete",
+      "edit": "Edit"
+    }
+  },
+  "notifications": {
+    "success": {
+      "title": "Success",
+      "generic": "Operation completed successfully"
+    },
+    "error": {
+      "title": "Error",
+      "generic": "An error occurred while processing your request"
+    },
+    "warning": {
+      "title": "Attention",
+      "generic": "Please verify the information"
+    },
+    "info": {
+      "title": "Information",
+      "generic": "Important information"
+    }
+  }
+}

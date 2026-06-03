@@ -1,0 +1,24 @@
+[
+  {
+    "nome": "Acordo Judicial de Reparação Integral",
+    "categoria": "Acordos",
+    "conteudo": "Documento principal do acordo judicial para reparação integral.",
+    "dataAtualizacao": "2025-01-15",
+    "link": "/ajri.pdf"
+  },
+  {
+    "nome": "Relatório de Auditoria 4411",
+    "categoria": "Relatórios",
+    "conteudo": "Relatório técnico da auditoria 4411 com escopo e conclusões.",
+    "dataAtualizacao": "2025-02-03",
+    "link": "/docs/relatorio-4411.pdf"
+  },
+  {
+    "nome": "Relatório AJRI",
+    "categoria": "Relatórios",
+    "conteudo": "Descrição de Teste",
+    "dataAtualizacao": "2025-09-01",
+    "link": "/docs/1756745060426-ajri.pdf",
+    "showDownload": true
+  }
+]
