@@ -137,6 +137,17 @@ export default function ValeFinancialAudit() {
           <p className='text-muted-foreground text-base md:text-lg leading-relaxed'>
           Ressalta-se que os resultados obtidos pela EY a partir do confronto entre os valores pagos pela Vale S.A. e o recálculo dos valores corrigidos monetariamente considerando o disposto na cláusula 4.6, acrescidos de eventuais multas e juros conforme previsto na cláusula 7.6 do AJRI, serão apresentados pela auditoria após definições quanto a metodologia de cálculo do IPCA e a data de trânsito em julgado da sentença homologatória do Acordo.​
           </p>
+          <p className='text-muted-foreground text-base md:text-lg leading-relaxed'>
+            Abaixo são apresentados os resultados dessa verificação:
+          </p>
+          <div className='mx-auto my-6 w-full max-w-5xl overflow-hidden border border-zinc-300 bg-zinc-50 p-2 shadow-md'>
+            <PowerBiView
+              title='Escopo D'
+              src='https://app.powerbi.com/view?r=eyJrIjoiMmI3OGYxNzMtYmE4NS00ZTNiLWI0N2EtZjBmYjgzODYyYThlIiwidCI6IjViOTczZjk5LTc3ZGYtNGJlYi1iMjdkLWFhMGM3MGI4NDgyYyIsImMiOjh9'
+              width={1100}
+              height={620}
+            />
+          </div>
         </div>
         <hr />
       </div>
