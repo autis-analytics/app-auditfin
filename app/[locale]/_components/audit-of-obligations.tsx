@@ -9,6 +9,12 @@ import {
   AccordionItem,
 } from '@/components/ui/accordion'
 
+const participationInformedPowerBiUrl =
+  'https://app.powerbi.com/view?r=eyJrIjoiNTI0YjhlM2QtNGM5NS00OTIwLWFiYmMtZTBkZmQxZjBiYmJmIiwidCI6IjViOTczZjk5LTc3ZGYtNGJlYi1iMjdkLWFhMGM3MGI4NDgyYyIsImMiOjh9'
+
+const camfPowerBiUrl =
+  'https://app.powerbi.com/view?r=eyJrIjoiNTRlYWU2MGItZDg3NC00NDE4LWIzOWMtNDVkNjBiYzc0ZjViIiwidCI6IjViOTczZjk5LTc3ZGYtNGJlYi1iMjdkLWFhMGM3MGI4NDgyYyIsImMiOjh9'
+
 const roles = [
   {
     id: 'justice-institutions',
@@ -74,19 +80,6 @@ const roles = [
       </div>
     ),
   },
-  {
-    id: 'camf-accountability-audit',
-    title:
-      'Auditoria da Prestação de Contas da Coordenação de Acompanhamento Metodológico e Finalístico (CAMF)',
-    content: (
-      <p>
-        Consiste na análise do cumprimento do Plano de Trabalho, na avaliação da
-        adequação dos gastos aos objetivos e atividades previstos e na
-        verificação da prestação de contas financeira apresentada pela
-        Coordenação de Acompanhamento Metodológico e Finalístico (CAMF).
-      </p>
-    ),
-  },
 ]
 
 function RolesAccordion() {
@@ -114,6 +107,19 @@ function RolesAccordion() {
           </AccordionItem>
         ))}
       </Accordion>
+    </div>
+  )
+}
+
+function AuditResults({ title, src }: { title: string; src: string }) {
+  return (
+    <div className='space-y-4 pt-2'>
+      <p className='font-medium text-foreground'>
+        Os resultados obtidos pela auditoria são apresentados abaixo:
+      </p>
+      <div className='mx-auto w-full max-w-[600px] overflow-hidden border border-zinc-300 bg-zinc-50 p-2 shadow-md'>
+        <PowerBiView title={title} src={src} width={600} height={373.5} />
+      </div>
     </div>
   )
 }
@@ -262,7 +268,25 @@ export default function AuditOfObligations() {
           id='audit-of-obligations-participation-accounting'
           className='bg-zinc-200'
         >
-          <RolesAccordion />
+          <div className='space-y-8'>
+            <RolesAccordion />
+            <AuditResults
+              title='Prestação de Contas - Participação Informada'
+              src={participationInformedPowerBiUrl}
+            />
+          </div>
+        </ExpandableCard>
+
+        <ExpandableCard
+          title='Auditoria da Prestação de Contas da Coordenação de Acompanhamento Metodológico e Finalístico (CAMF)'
+          description='Consiste na análise do cumprimento do Plano de Trabalho, na avaliação da adequação dos gastos aos objetivos e atividades previstos e na verificação da prestação de contas financeira apresentada pela Coordenação de Acompanhamento Metodológico e Finalístico (CAMF).'
+          id='camf-accountability-audit'
+          className='bg-zinc-200'
+        >
+          <AuditResults
+            title='Prestação de Contas - CAMF'
+            src={camfPowerBiUrl}
+          />
         </ExpandableCard>
       </div>
     </div>

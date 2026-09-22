@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import PowerBiView from '@/components/my-components/power-bi-view'
 import { PlusIcon } from 'lucide-react'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
 import {
@@ -6,6 +7,9 @@ import {
   AccordionContent,
   AccordionItem,
 } from '@/components/ui/accordion'
+
+const annexI1PowerBiUrl =
+  'https://app.powerbi.com/view?r=eyJrIjoiNGFlMWM5ZGItNmVkMC00MmFmLWI3ZTEtM2I5YzMwYjNjYmQ5IiwidCI6IjViOTczZjk5LTc3ZGYtNGJlYi1iMjdkLWFhMGM3MGI4NDgyYyIsImMiOjh9'
 
 const roles = [
   {
@@ -138,6 +142,20 @@ export default function AnnexI1Audit() {
               </AccordionItem>
             ))}
           </Accordion>
+        </div>
+
+        <div className='space-y-4'>
+          <p className='font-medium text-foreground md:text-lg'>
+            Os resultados obtidos pela auditoria são apresentados abaixo:
+          </p>
+          <div className='mx-auto w-full max-w-[600px] overflow-hidden border border-zinc-300 bg-zinc-50 p-2 shadow-md'>
+            <PowerBiView
+              title='Prestação de Contas - Anexo I.1'
+              src={annexI1PowerBiUrl}
+              width={600}
+              height={373.5}
+            />
+          </div>
         </div>
       </div>
     </section>
