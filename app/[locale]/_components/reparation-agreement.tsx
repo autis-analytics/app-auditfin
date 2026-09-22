@@ -100,13 +100,25 @@ export default function ReparationAgreement() {
         <ul className='list-disc text-muted-foreground text-base md:text-lg leading-relaxed'>
           <li>
             Associação Estadual de Defesa Ambiental - AEDAS: responsável pelas
-            Regiões 1 e 2;
+            Regiões 1 e 2 no período compreendido entre fevereiro de 2020 e
+            janeiro de 2026;
+          </li>
+          <li>
+            Instituto Brasileiro de Gestão e Pesquisa - IBGP: responsável pela
+            Região 1, a partir de maio de 2026;
+          </li>
+          <li>
+            Associação de Desenvolvimento Agrícola Interestadual - ADAI:
+            responsável pela Região 2, a partir de maio de 2026;
           </li>
           <li>
             Núcleo de Assessoria às Comunidades Atingidas por Barragens - NACAB:
-            responsável pela Região 3;
+            responsável pela Região 3 desde fevereiro de 2020;
           </li>
-          <li>Instituto Guaicuy: responsável pelas Regiões 4 e 5.</li>
+          <li>
+            Instituto Guaicuy: responsável pelas Regiões 4 e 5 desde fevereiro
+            de 2020.
+          </li>
         </ul>
 
         <PowerBiView src='https://app.powerbi.com/view?r=eyJrIjoiZDFiYzU3OTAtYzhhNS00MzU0LTk4MWQtZGE3OTViNjUzYWVkIiwidCI6IjViOTczZjk5LTc3ZGYtNGJlYi1iMjdkLWFhMGM3MGI4NDgyYyIsImMiOjh9' />
@@ -122,13 +134,17 @@ export default function ReparationAgreement() {
         <p>
           O projeto de Auditoria Financeira é fruto do Acordo Judicial para
           Reparação Integral relativa ao Rompimento das Barragens B I, B IV e B
-          IV-A / Córrego do Feijão (&quot;AJRI&quot;) e abrange dois escopos
+          IV-A / Córrego do Feijão (&quot;AJRI&quot;) e abrange três escopos
           gerais de atuação:
         </p>
         <ul className='list-disc md:text-lg leading-relaxed space-y-4'>
           <li>
             Auditoria Independente das Obrigações Especificadas na cláusula
             4.4.11 do Acordo Judicial;
+          </li>
+          <li>
+            Auditoria Independente das ATIs no âmbito do Anexo I.1 do Acordo
+            Judicial; e
           </li>
           <li>
             Auditoria das obrigações de pagar da Vale, previstas nas Cláusulas

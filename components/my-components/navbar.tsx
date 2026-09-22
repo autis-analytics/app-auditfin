@@ -41,7 +41,7 @@ function MobileMenu({
     <Popover>
       <PopoverTrigger asChild>
         <Button
-          className='group size-8 lg:hidden transition-colors text-background hover:bg-[#1a1a24] hover:text-background'
+          className='group size-8 xl:hidden transition-colors text-background hover:bg-[#1a1a24] hover:text-background'
           variant='ghost'
           size='icon'
         >
@@ -74,7 +74,7 @@ function MobileMenu({
       </PopoverTrigger>
       <PopoverContent
         align='start'
-        className='w-64 p-1 lg:hidden text-left bg-primary text-background'
+        className='w-72 p-1 xl:hidden text-left bg-primary text-background'
       >
         <NavigationMenu className='max-w-none *:w-full'>
           <NavigationMenuList className='flex-col items-start gap-0 md:gap-2'>
@@ -109,14 +109,14 @@ function DesktopMenu({
   activeHash: string
 }) {
   return (
-    <NavigationMenu viewport={false} className='max-lg:hidden'>
-      <NavigationMenuList className='gap-2'>
+    <NavigationMenu viewport={false} className='max-xl:hidden'>
+      <NavigationMenuList className='gap-1'>
         {navigationLinks.map((link, index) => (
           <NavigationMenuItem key={index}>
             <NavigationMenuLink
               href={link.href}
               className={cn(
-                'relative font-medium text-center text-base rounded-md text-background transition-all hover:bg-[#1a1a24] hover:text-background',
+                'relative px-2 py-2 font-medium text-center text-sm leading-tight rounded-md text-background transition-all hover:bg-[#1a1a24] hover:text-background',
                 isLinkActive(pathname, activeHash, link.href) &&
                   'font-semibold bg-[#1a1a24] border-b-4 border-zinc-400 scale-108',
               )}
@@ -144,6 +144,10 @@ export default function Navbar() {
       {
         href: '#audit-of-obligations',
         label: t('audit4411'),
+      },
+      {
+        href: '#annex-i1-audit',
+        label: t('auditAnnexI1'),
       },
       {
         href: '#vale-financial-audit',
@@ -245,7 +249,7 @@ export default function Navbar() {
 
   return (
     <nav className='border-b border-transparent px-4 md:px-6 bg-[#2e2e38] text-background'>
-      <div className='max-w-7xl mx-auto flex h-16 items-center justify-between gap-4'>
+      <div className='max-w-[90rem] mx-auto flex min-h-16 items-center justify-between gap-4'>
         {/* Navegação */}
         <div className='flex items-center gap-2'>
           {/* Mobile */}
