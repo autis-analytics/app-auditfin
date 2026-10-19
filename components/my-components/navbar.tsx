@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { ArrowUpRight, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import {
   Popover,
   PopoverContent,
@@ -128,15 +128,6 @@ export default function Navbar() {
             </a>
           ))}
         </div>
-        <a
-          className='nav-document'
-          href='/ajri.pdf'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Acordo em PDF <ArrowUpRight size={16} aria-hidden='true' />
-          <span className='sr-only'> (PDF, abre em nova aba)</span>
-        </a>
       </div>
     </nav>
   )

@@ -1,5 +1,3 @@
-import { ArrowDownToLine, ArrowUpRight } from 'lucide-react'
-
 export const portalSections = [
   {
     id: 'reparation-agreement',
@@ -37,16 +35,6 @@ export default function SectionIndex() {
             </a>
           ))}
         </nav>
-        <div className='index-document'>
-          <ArrowDownToLine size={22} aria-hidden='true' />
-          <h2>Documento de referência</h2>
-          <p>Consulte o Acordo Judicial de Reparação Integral e seus anexos.</p>
-          <a href='/ajri.pdf' target='_blank' rel='noopener noreferrer'>
-            Abrir acordo <ArrowUpRight size={15} aria-hidden='true' />
-            <span className='sr-only'> (PDF, nova aba)</span>
-          </a>
-          <span className='file-caption'>PDF · 735 KB</span>
-        </div>
       </div>
     </aside>
   )

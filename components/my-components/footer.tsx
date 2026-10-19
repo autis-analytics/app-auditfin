@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { ArrowUp, ArrowUpRight } from 'lucide-react'
+import { ArrowUp } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -12,10 +12,6 @@ export default function Footer() {
             <p>Brumadinho · Minas Gerais</p>
           </div>
           <nav aria-label='Links do rodapé'>
-            <a href='/ajri.pdf' target='_blank' rel='noopener noreferrer'>
-              Acordo Judicial <ArrowUpRight size={15} aria-hidden='true' />
-              <span className='sr-only'> (PDF, nova aba)</span>
-            </a>
             <a href='#faq'>Dúvidas frequentes</a>
             <a href='#terms-of-use'>Termos de uso</a>
           </nav>
