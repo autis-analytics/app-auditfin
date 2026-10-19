@@ -16,7 +16,7 @@ import {
 } from '@/components/ui/popover'
 import { useTranslations } from 'next-intl'
 import { usePathname } from '@/i18n/navigation'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 
 type NavLink = {
   label: string
@@ -37,15 +37,22 @@ function MobileMenu({
   pathname: string
   activeHash: string
 }) {
+  const t = useTranslations('accessibility')
+  const [open, setOpen] = useState(false)
+  const selectedSection = useRef<string | null>(null)
+
   return (
-    <Popover>
+    <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button
+          aria-label={open ? t('closeMenu') : t('openMenu')}
           className='group size-8 xl:hidden transition-colors text-background hover:bg-[#1a1a24] hover:text-background'
           variant='ghost'
           size='icon'
         >
           <svg
+            aria-hidden='true'
+            focusable='false'
             className='pointer-events-none'
             width={16}
             height={16}
@@ -75,6 +82,24 @@ function MobileMenu({
       <PopoverContent
         align='start'
         className='w-72 p-1 xl:hidden text-left bg-primary text-background'
+        onCloseAutoFocus={(event) => {
+          if (!selectedSection.current) return
+
+          const sectionId = selectedSection.current
+          selectedSection.current = null
+          const section = document.getElementById(sectionId)
+          if (!section) return
+
+          event.preventDefault()
+          requestAnimationFrame(() => {
+            const currentSection = document.getElementById(sectionId)
+            if (!currentSection) return
+            if (!currentSection.hasAttribute('tabindex')) {
+              currentSection.setAttribute('tabindex', '-1')
+            }
+            currentSection.focus({ preventScroll: true })
+          })
+        }}
       >
         <NavigationMenu className='max-w-none *:w-full'>
           <NavigationMenuList className='flex-col items-start gap-0 md:gap-2'>
@@ -82,6 +107,12 @@ function MobileMenu({
               <NavigationMenuItem key={index} className='w-full'>
                 <NavigationMenuLink
                   href={link.href}
+                  onClick={() => {
+                    if (link.href?.startsWith('#')) {
+                      selectedSection.current = link.href.slice(1)
+                    }
+                    setOpen(false)
+                  }}
                   className={cn(
                     'py-2 text-base rounded-md text-background transition-colors hover:bg-[#1a1a24] hover:text-background',
                     isLinkActive(pathname, activeHash, link.href) &&

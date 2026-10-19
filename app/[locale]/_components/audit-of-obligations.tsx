@@ -253,15 +253,39 @@ export default function AuditOfObligations() {
                 na análise das prestações de contas financeiras e finalísticas
                 apresentadas pelas Assessorias Técnicas Independentes,
                 escolhidas pelas comunidades das cinco regiões, no âmbito da
-                Participação Informada¹. O escopo também contempla a avaliação
-                da prestação de contas financeira apresentada pela Coordenação
-                de Acompanhamento Metodológico e Finalístico (CAMF).
+                Participação Informada
+                <sup className='align-super text-[0.7em]'>
+                  <a
+                    id='participation-informed-footnote-reference'
+                    href='#participation-informed-footnote'
+                    role='doc-noteref'
+                    aria-label='Ir para a nota sobre Participação Informada'
+                    className='rounded-sm underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current'
+                  >
+                    1
+                  </a>
+                </sup>
+                . O escopo também contempla a avaliação da prestação de contas
+                financeira apresentada pela Coordenação de Acompanhamento
+                Metodológico e Finalístico (CAMF).
               </p>
-              <p className='text-sm leading-relaxed'>
+              <p
+                id='participation-informed-footnote'
+                role='doc-footnote'
+                tabIndex={-1}
+                className='text-sm leading-relaxed focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current'
+              >
                 ¹ Consiste no apoio à participação informada das pessoas
                 atingidas, na defesa e garantia de seus direitos quanto à
                 execução e cumprimento dos termos do Acordo Judicial e seus
-                respectivos anexos.
+                respectivos anexos.{' '}
+                <a
+                  href='#participation-informed-footnote-reference'
+                  aria-label='Retornar ao texto sobre Participação Informada'
+                  className='inline-block rounded-sm text-xs underline underline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current'
+                >
+                  Voltar
+                </a>
               </p>
             </div>
           }

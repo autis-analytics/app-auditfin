@@ -1,11 +1,8 @@
 import Accordion1 from '@/components/my-components/accordion-1'
 import PowerBiView from '@/components/my-components/power-bi-view'
 import Image from 'next/image'
-// import { useTranslations } from 'next-intl'
 
 export default function ReparationAgreement() {
-  // const t = useTranslations('pages.home')
-
   const thePartiesItems = [
     {
       key: '1',
