@@ -1,5 +1,4 @@
 export default function SectionHeading({
-  number,
   eyebrow,
   title,
   id,
@@ -11,10 +10,9 @@ export default function SectionHeading({
 }) {
   return (
     <div className='chapter-heading'>
-      <div className='chapter-kicker'>
-        <span>{number}</span>
-        {eyebrow}
-      </div>
+      <p className='chapter-kicker'>
+        {eyebrow.charAt(0) + eyebrow.slice(1).toLocaleLowerCase('pt-BR')}
+      </p>
       <h2 id={id}>{title}</h2>
     </div>
   )

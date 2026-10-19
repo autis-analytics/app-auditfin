@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { Public_Sans, Roboto_Mono } from 'next/font/google'
+import localFont from 'next/font/local'
+import { Roboto_Mono } from 'next/font/google'
 import './globals.css'
 import './portal.css'
 import Header from '@/components/my-components/header'
@@ -14,10 +15,36 @@ import Footer from '@/components/my-components/footer'
 import GoogleAnalytics from '@/components/my-components/google-analytics'
 // import Footer from '@/components/my-components/footer'
 
-const publicSans = Public_Sans({
-  variable: '--font-public-sans',
-  subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+const rawline = localFont({
+  variable: '--font-rawline',
+  display: 'swap',
+  src: [
+    {
+      path: '../../public/fonts/rawline/rawline-400.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/rawline/rawline-400i.woff2',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: '../../public/fonts/rawline/rawline-500.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/rawline/rawline-600.woff2',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/rawline/rawline-700.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
 })
 
 const robotoMono = Roboto_Mono({
@@ -72,7 +99,7 @@ const RootLayout = async ({
   return (
     <html lang={locale} suppressHydrationWarning data-lt-installed>
       <body
-        className={`${publicSans.variable} ${robotoMono.variable} antialiased flex flex-col min-h-screen`}
+        className={`${rawline.variable} ${robotoMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <ThemeProvider attribute='class' forcedTheme='light'>
           <NextIntlClientProvider locale={locale} messages={messages}>

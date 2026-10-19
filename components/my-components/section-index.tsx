@@ -29,11 +29,10 @@ export default function SectionIndex() {
   return (
     <aside className='section-index'>
       <div className='section-index-sticky'>
-        <p className='index-label'>NESTA PÁGINA</p>
+        <p className='index-label'>Nesta página</p>
         <nav aria-label='Índice do conteúdo'>
-          {portalSections.map((section, index) => (
+          {portalSections.map((section) => (
             <a href={`#${section.id}`} key={section.id}>
-              <span className='index-number'>0{index + 1}</span>
               <span>{section.title}</span>
             </a>
           ))}

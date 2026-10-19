@@ -4,11 +4,15 @@ Versão de avaliação na branch `design/portal-institucional-20261019`, baseada
 
 ## Direção de UI/UX
 
-Página única com azul institucional, verde discreto, Public Sans, fotografia do acervo e hierarquia de leitura. A abertura explica o portal; uma lista orienta a consulta das três frentes; o índice lateral acompanha os documentos extensos. Menu móvel, atalhos, foco de teclado, alto contraste persistente e respeito à preferência de movimento reduzido.
+Página única inspirada no portal GOV.BR: Rawline, azul de ação `#1351B4`, azul escuro `#0C326F`, superfícies brancas e texto `#333333`. A abertura privilegia a consulta: título direto, busca por seções e três acessos às frentes da auditoria. A fotografia do acervo acompanha o contexto do Acordo em uma faixa secundária. A leitura extensa usa títulos simples e índice lateral. Menu móvel, atalhos, foco de teclado, alto contraste persistente e respeito à preferência de movimento reduzido.
+
+A busca é local e indexa as seis seções do portal por título, descrição e assuntos relacionados; não pesquisa o conteúdo dos PDFs nem os dados externos do Power BI. Tem suporte a termos sem acentos, estado sem resultados e navegação de teclado até a seção encontrada. Rawline é servida localmente, com arquivos do CDN oficial SERPRO e licença SIL Open Font License em `public/fonts/rawline/OFL.txt`.
 
 Referências estudadas:
 
 - [Design System gov.br](https://www.gov.br/ds) e [repositório SERPRO](https://github.com/serpro-brasil/GOVBR-DS): consistência, acessibilidade e navegação institucional.
+- [Portal GOV.BR](https://www.gov.br/pt-br/), [template Base](https://www.gov.br/ds/templates/base) e [biblioteca React oficial](https://gitlab.com/govbr-ds/bibliotecas/react-components): busca, atalhos de serviço, hierarquia e fonte Rawline. Componentes implementados com a estrutura Next.js existente.
+- [Serviços da Câmara](https://www.camara.leg.br/servicos) e [TCU](https://www.tcu.gov.br/): navegação por assunto e acessos orientados à tarefa.
 - [Portal da Transparência / CGU](https://portaldatransparencia.gov.br/): consultas por assunto e separação entre contexto e dados.
 - [Pró-Brumadinho / Governo de Minas Gerais](https://www.mg.gov.br/pro-brumadinho): organização do contexto do acordo, anexos e obrigações.
 - [Dados Abertos da Câmara](https://dadosabertos.camara.leg.br/): apresentação orientada às tarefas do visitante.
