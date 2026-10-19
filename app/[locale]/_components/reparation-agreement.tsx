@@ -1,6 +1,6 @@
 import Accordion1 from '@/components/my-components/accordion-1'
 import PowerBiView from '@/components/my-components/power-bi-view'
-import Image from 'next/image'
+import SectionHeading from '@/components/my-components/section-heading'
 
 export default function ReparationAgreement() {
   const thePartiesItems = [
@@ -29,21 +29,18 @@ export default function ReparationAgreement() {
   ]
 
   return (
-    <div className='content-container space-y-10'>
+    <div
+      className='audit-section space-y-10'
+      id='reparation-agreement'
+      tabIndex={-1}
+    >
+      <SectionHeading
+        number='01'
+        eyebrow='CONTEXTO E ABRANGÊNCIA'
+        title='O Acordo de Reparação'
+      />
       {/* Seção: Introdução do Acordo */}
-      <section
-        id='reparation-agreement'
-        className='bg-zinc-200 shadow-md p-8 md:p-10 space-y-6'
-      >
-        <h1 className='text-3xl md:text-4xl font-bold tracking-tight text-left flex items-end gap-3'>
-          <Image
-            src='/icons/iconAcordoReparacao.png'
-            alt='Ícone Acordo de Reparação'
-            width={60}
-            height={60}
-          />{' '}
-          O Acordo de Reparação
-        </h1>
+      <section className='agreement-context space-y-6'>
         <p className='md:text-lg'>
           No dia 25 de janeiro de 2019 ocorreu o Rompimento das Barragens B-I,
           B-IV e B-IVA, da Mina Córrego do Feijão, no município de Brumadinho,
@@ -80,15 +77,7 @@ export default function ReparationAgreement() {
 
       {/* Seção: Extensão Territorial */}
       <section id='territorial-extension' className='space-y-6'>
-        <h1 className='text-2xl md:text-3xl font-semibold tracking-tight flex items-end gap-3'>
-          <Image
-            src='/icons/iconExtensaoTerritorial.png'
-            alt='Ícone Acordo de Reparação'
-            width={60}
-            height={60}
-          />{' '}
-          Extensão Territorial
-        </h1>
+        <h3 className='subsection-title'>Extensão Territorial</h3>
         <p className='text-muted-foreground text-base md:text-lg leading-relaxed'>
           O Acordo Judicial para Reparação Integral (AJRI) abrange Brumadinho e
           outros 25 municípios diretamente atingidos, distribuídos em 5 regiões,
@@ -121,13 +110,8 @@ export default function ReparationAgreement() {
         <PowerBiView src='https://app.powerbi.com/view?r=eyJrIjoiZDFiYzU3OTAtYzhhNS00MzU0LTk4MWQtZGE3OTViNjUzYWVkIiwidCI6IjViOTczZjk5LTc3ZGYtNGJlYi1iMjdkLWFhMGM3MGI4NDgyYyIsImMiOjh9' />
       </section>
 
-      <section
-        className='bg-primary text-background space-y-6 my-6 md:my-10 md:text-lg leading-relaxed p-4'
-        id='the-project'
-      >
-        <h1 className='text-2xl md:text-3xl font-bold tracking-tight'>
-          O Projeto
-        </h1>
+      <section className='project-scope space-y-6' id='the-project'>
+        <h3 className='subsection-title'>O Projeto</h3>
         <p>
           O projeto de Auditoria Financeira é fruto do Acordo Judicial para
           Reparação Integral relativa ao Rompimento das Barragens B I, B IV e B
@@ -156,9 +140,7 @@ export default function ReparationAgreement() {
       </section>
 
       <section className='space-y-6 my-6 md:my-10' id='limits-of-action'>
-        <h1 className='text-3xl md:text-3xl font-bold tracking-tight'>
-          Limites de Atuação
-        </h1>
+        <h3 className='subsection-title'>Limites de Atuação</h3>
         <p className='text-muted-foreground text-base md:text-lg leading-relaxed'>
           O AJRI também prevê a atuação de uma auditoria socioeconômica e uma
           socioambiental, cujas atividades não são escopo de avaliação da EY.

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useId, useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Button } from '../ui/button'
@@ -23,17 +23,10 @@ export function ExpandableCard({
 }: ExpandableCardProps) {
   const t = useTranslations('common')
   const [isExpanded, setIsExpanded] = useState(false)
+  const panelId = useId()
 
   return (
-    <div
-      className={cn(
-        // card base e espaçamento com sombra combinada (baixo + esquerda)
-        'p-6 md:p-8 space-y-4',
-        'shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1),-4px_0_6px_-1px_rgba(0,0,0,0.1),-2px_0_4px_-2px_rgba(0,0,0,0.1)]',
-        className,
-      )}
-      {...props}
-    >
+    <div className={cn('audit-expandable space-y-4', className)} {...props}>
       <h3 className='text-xl md:text-2xl font-semibold tracking-tight'>
         {title}
       </h3>
@@ -52,10 +45,13 @@ export function ExpandableCard({
         <Button
           size='lg'
           onClick={() => setIsExpanded(!isExpanded)}
-          className='px-4 cursor-pointer'
+          variant='outline'
+          className='expand-audit-button'
           aria-expanded={isExpanded}
+          aria-controls={panelId}
         >
-          {isExpanded ? 'Recolher' : t('readMore')}
+          {isExpanded ? 'Recolher detalhes' : t('readMore')}
+          <span className='sr-only'>: {title}</span>
           <ChevronDown
             className={cn(
               'w-4 h-4 transition-transform duration-300',
@@ -65,12 +61,7 @@ export function ExpandableCard({
         </Button>
       </div>
 
-      <div
-        className={cn(
-          'transition-all duration-500 ease-in-out',
-          isExpanded ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden',
-        )}
-      >
+      <div id={panelId} hidden={!isExpanded}>
         <div className='border-t pt-4 pb-2 text-muted-foreground text-base md:text-lg leading-relaxed space-y-4'>
           {children}
         </div>

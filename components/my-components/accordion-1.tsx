@@ -30,22 +30,13 @@ export default function Accordion1({
   return (
     <div className={cn('space-y-4', className)} {...props}>
       {/* Título da seção do acordeão - h2 secundário */}
-      <h2 className='text-2xl md:text-3xl font-bold tracking-tight'>{title}</h2>
-      <Accordion
-        type='single'
-        collapsible
-        className='w-full space-y-4' // espaço entre os cards
-      >
+      <h3 className='subsection-title'>{title}</h3>
+      <Accordion type='single' collapsible className='w-full'>
         {items.map((item) => (
           <AccordionItem
             value={item.key}
             key={item.key}
-            className={cn(
-              // card base
-              'p-4 md:p-6 shadow-md',
-              // barra lateral primária
-              'border-l-4 border-l-primary',
-            )}
+            className={cn('py-2 border-b border-border')}
           >
             <AccordionPrimitive.Header className='flex'>
               <AccordionPrimitive.Trigger
@@ -60,7 +51,7 @@ export default function Accordion1({
                   // linha separadora (apenas quando aberto)
                   'data-[state=open]:pb-4 data-[state=open]:border-b data-[state=open]:border-border',
                   // tipografia
-                  'text-left text-xl md:text-2xl leading-8 font-semibold',
+                  'text-left text-base leading-7 font-semibold',
                   // estados
                   'disabled:pointer-events-none disabled:opacity-50',
                   // estilo do ícone

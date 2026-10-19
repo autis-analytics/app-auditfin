@@ -1,21 +1,19 @@
-import Image from 'next/image'
+import SectionHeading from '@/components/my-components/section-heading'
 
 export default function TermsOfUse() {
   return (
-    <div id='terms-of-use' className='space-y-8'>
-      <div className='bg-[url("/images/section-terms-of-use.jpg")] bg-cover bg-center bg-no-repeat h-64 flex justify-center items-center'>
-        <h2 className='text-3xl md:text-4xl font-bold tracking-tight text-white drop-shadow-md'>
-          Termos de Uso
-        </h2>
-      </div>
+    <div
+      id='terms-of-use'
+      className='audit-section terms-section space-y-8'
+      tabIndex={-1}
+    >
+      <SectionHeading
+        number='06'
+        eyebrow='SOBRE O USO DAS INFORMAÇÕES'
+        title='Termos de uso'
+      />
       <div className='content-container space-y-4 text-base md:text-lg leading-relaxed'>
-        <div className='inline-flex items-end gap-4 border-b-4 pb-2 border-[#2e525a] pr-10'>
-          <Image
-            src='/icons/iconLimitacoesPermissas.png'
-            alt='Ícone Acordo de Reparação'
-            width={60}
-            height={60}
-          />
+        <div>
           <h3 className='text-xl font-semibold'>
             Limitação e Responsabilidades
           </h3>
@@ -41,13 +39,7 @@ export default function TermsOfUse() {
           de alguma forma associado às informações apresentadas no portal.
         </p>
         <hr />
-        <div className='inline-flex items-end gap-4 border-b-4 pb-2 border-[#2e525a] pr-10'>
-          <Image
-            src='/icons/iconPropriedadeIntelectual.png'
-            alt='Ícone Acordo de Reparação'
-            width={60}
-            height={60}
-          />
+        <div>
           <h3 className='text-xl font-semibold'>Propriedade Intelectual</h3>
         </div>
         <p>
@@ -60,13 +52,7 @@ export default function TermsOfUse() {
           expressa da EY.
         </p>
         <hr />
-        <div className='inline-flex items-end gap-4 border-b-4 pb-2 border-[#2e525a] pr-10'>
-          <Image
-            src='/icons/iconDadosApresentadosPortal.png'
-            alt='Ícone Acordo de Reparação'
-            width={60}
-            height={60}
-          />
+        <div>
           <h3 className='text-xl font-semibold'>
             Dados apresentados no Portal
           </h3>

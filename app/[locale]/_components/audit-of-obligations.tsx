@@ -1,5 +1,5 @@
 import PowerBiView from '@/components/my-components/power-bi-view'
-import Image from 'next/image'
+import SectionHeading from '@/components/my-components/section-heading'
 import { ExpandableCard } from '@/components/my-components/expandable-card'
 import { PlusIcon } from 'lucide-react'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
@@ -85,9 +85,9 @@ const roles = [
 function RolesAccordion() {
   return (
     <div className='space-y-4'>
-      <h2 className='text-xl font-bold text-foreground'>
+      <h4 className='text-xl font-bold text-foreground'>
         Papéis e Responsabilidades
-      </h2>
+      </h4>
       <Accordion type='single' collapsible className='w-full'>
         {roles.map((role) => (
           <AccordionItem value={role.id} key={role.id} className='py-2'>
@@ -117,7 +117,7 @@ function AuditResults({ title, src }: { title: string; src: string }) {
       <p className='font-medium text-foreground'>
         Os resultados obtidos pela auditoria são apresentados abaixo:
       </p>
-      <div className='mx-auto w-full max-w-[600px] overflow-hidden border border-zinc-300 bg-zinc-50 p-2 shadow-md'>
+      <div className='report-host'>
         <PowerBiView title={title} src={src} width={600} height={373.5} />
       </div>
     </div>
@@ -126,22 +126,16 @@ function AuditResults({ title, src }: { title: string; src: string }) {
 
 export default function AuditOfObligations() {
   return (
-    <div className='space-y-8' id='audit-of-obligations'>
-      <div className='relative flex min-h-72 items-center justify-center overflow-hidden py-8 sm:h-72 sm:py-0 md:h-80 lg:h-96'>
-        <Image
-          src='/images/Seção1_PB.jpg'
-          alt='Documentos e gráficos de auditoria financeira'
-          fill
-          priority
-          sizes='100vw'
-          className='object-cover'
-        />
-        <div className='absolute inset-0 bg-black/30' aria-hidden='true' />
-        <h1 className='relative z-[1] mx-auto max-w-3xl px-4 text-center text-xl font-bold leading-snug tracking-tight text-white drop-shadow-md sm:px-6 sm:text-3xl md:text-4xl'>
-          Auditoria Independente das Obrigações Especificadas na cláusula 4.4.11
-          do Acordo Judicial
-        </h1>
-      </div>
+    <div
+      className='audit-section space-y-8'
+      id='audit-of-obligations'
+      tabIndex={-1}
+    >
+      <SectionHeading
+        number='02'
+        eyebrow='ESTRUTURAS DE APOIO E ASSESSORIAS'
+        title='Auditoria das obrigações da cláusula 4.4.11'
+      />
 
       <div className='content-container space-y-10'>
         <p className='text-base leading-relaxed text-muted-foreground md:text-lg'>
@@ -216,7 +210,7 @@ export default function AuditOfObligations() {
                 comprovantes bancários.
               </li>
             </ul>
-            <div className='mx-auto my-6 w-full max-w-5xl overflow-hidden border border-zinc-300 bg-zinc-50 p-2 shadow-md'>
+            <div className='report-host'>
               <PowerBiView
                 title='Cláusula 4.4.11'
                 src='https://app.powerbi.com/view?r=eyJrIjoiMWJlYTE5YzMtNzBmMS00ZjdkLWI4MDctMjllZTI0MjMzNTIxIiwidCI6IjViOTczZjk5LTc3ZGYtNGJlYi1iMjdkLWFhMGM3MGI4NDgyYyIsImMiOjh9'

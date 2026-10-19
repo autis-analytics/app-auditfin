@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import SectionHeading from '@/components/my-components/section-heading'
 import PowerBiView from '@/components/my-components/power-bi-view'
 import { PlusIcon } from 'lucide-react'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
@@ -83,21 +83,16 @@ const roles = [
 
 export default function AnnexI1Audit() {
   return (
-    <section className='space-y-8' id='annex-i1-audit'>
-      <div className='relative flex min-h-72 items-center justify-center overflow-hidden py-8 sm:h-72 sm:py-0 md:h-80 lg:h-96'>
-        <Image
-          src='/images/Capa_Cor.png'
-          alt='Território abrangido pelo Acordo Judicial de Reparação Integral'
-          fill
-          sizes='100vw'
-          className='object-cover'
-        />
-        <div className='absolute inset-0 bg-black/45' aria-hidden='true' />
-        <h1 className='relative z-[1] mx-auto max-w-4xl px-4 text-center text-xl font-bold leading-snug tracking-tight text-white drop-shadow-md sm:px-6 sm:text-3xl md:text-4xl'>
-          Auditoria Independente das ATIs no âmbito do Anexo I.1 do Acordo
-          Judicial
-        </h1>
-      </div>
+    <section
+      className='audit-section space-y-8'
+      id='annex-i1-audit'
+      tabIndex={-1}
+    >
+      <SectionHeading
+        number='03'
+        eyebrow='PROJETOS DAS COMUNIDADES ATINGIDAS'
+        title='Auditoria das ATIs no âmbito do Anexo I.1'
+      />
 
       <div className='content-container space-y-10'>
         <div className='max-w-5xl space-y-6 text-base leading-relaxed text-muted-foreground md:text-lg'>
@@ -120,9 +115,7 @@ export default function AnnexI1Audit() {
         </div>
 
         <div className='space-y-4'>
-          <h2 className='text-2xl font-bold tracking-tight md:text-3xl'>
-            Papéis e Responsabilidades
-          </h2>
+          <h3 className='subsection-title'>Papéis e Responsabilidades</h3>
           <Accordion type='single' collapsible className='w-full'>
             {roles.map((role) => (
               <AccordionItem value={role.id} key={role.id} className='py-2'>
@@ -148,7 +141,7 @@ export default function AnnexI1Audit() {
           <p className='font-medium text-foreground md:text-lg'>
             Os resultados obtidos pela auditoria são apresentados abaixo:
           </p>
-          <div className='mx-auto w-full max-w-[600px] overflow-hidden border border-zinc-300 bg-zinc-50 p-2 shadow-md'>
+          <div className='report-host'>
             <PowerBiView
               title='Prestação de Contas - Anexo I.1'
               src={annexI1PowerBiUrl}

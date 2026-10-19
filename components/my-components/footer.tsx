@@ -1,22 +1,42 @@
-import React from 'react'
 import Image from 'next/image'
+import { ArrowUp, ArrowUpRight } from 'lucide-react'
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className='relative bg-white'>
-      <div className='container px-4 py-8 flex justify-center items-center'>
-        <div className='flex justify-start w-full'>
-          <Image
-            src='/EY_Logo.png'
-            alt='EY Logo'
-            width={60}
-            height={20}
-            className='object-contain'
-          />
+    <footer className='portal-footer'>
+      <div className='portal-container'>
+        <div className='footer-top'>
+          <div>
+            <p className='footer-title'>Auditoria Financeira</p>
+            <p>Acordo Judicial de Reparação Integral</p>
+            <p>Brumadinho · Minas Gerais</p>
+          </div>
+          <nav aria-label='Links do rodapé'>
+            <a href='/ajri.pdf' target='_blank' rel='noopener noreferrer'>
+              Acordo Judicial <ArrowUpRight size={15} aria-hidden='true' />
+              <span className='sr-only'> (PDF, nova aba)</span>
+            </a>
+            <a href='#faq'>Dúvidas frequentes</a>
+            <a href='#terms-of-use'>Termos de uso</a>
+          </nav>
+          <a className='back-to-top' href='#inicio'>
+            Voltar ao início <ArrowUp size={17} aria-hidden='true' />
+          </a>
+        </div>
+        <div className='footer-bottom'>
+          <div>
+            <Image
+              src='/EY_Logo.png'
+              alt='EY'
+              width={39}
+              height={43}
+              className='object-contain'
+            />
+            <span>Auditoria independente realizada pela EY.</span>
+          </div>
+          <span>Informações relativas ao escopo do projeto.</span>
         </div>
       </div>
     </footer>
   )
 }
-
-export default Footer

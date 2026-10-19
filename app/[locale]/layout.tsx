@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
-import { Roboto, Roboto_Mono, Roboto_Serif } from 'next/font/google'
+import { Public_Sans, Roboto_Mono } from 'next/font/google'
 import './globals.css'
+import './portal.css'
 import Header from '@/components/my-components/header'
 import { NextIntlClientProvider, hasLocale } from 'next-intl'
 import { notFound } from 'next/navigation'
@@ -13,8 +14,8 @@ import Footer from '@/components/my-components/footer'
 import GoogleAnalytics from '@/components/my-components/google-analytics'
 // import Footer from '@/components/my-components/footer'
 
-const roboto = Roboto({
-  variable: '--font-roboto',
+const publicSans = Public_Sans({
+  variable: '--font-public-sans',
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 })
@@ -25,15 +26,18 @@ const robotoMono = Roboto_Mono({
   weight: ['100', '200', '300', '400', '500', '600', '700'],
 })
 
-const robotoSerif = Roboto_Serif({
-  variable: '--font-roboto-serif',
-  subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-})
-
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : 'http://localhost:3000',
+  ),
   title: 'Portal de Auditoria Financeira',
   description: 'Acordo Judicial para Reparação Integral',
+  robots:
+    process.env.VERCEL_ENV === 'preview'
+      ? { index: false, follow: false }
+      : undefined,
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',
@@ -68,12 +72,14 @@ const RootLayout = async ({
   return (
     <html lang={locale} suppressHydrationWarning data-lt-installed>
       <body
-        className={`${roboto.variable} ${robotoMono.variable} ${robotoSerif.variable} antialiased flex flex-col min-h-screen`}
+        className={`${publicSans.variable} ${robotoMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <ThemeProvider attribute='class' forcedTheme='light'>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Header />
-            <main>{children}</main>
+            <main id='conteudo' tabIndex={-1}>
+              {children}
+            </main>
             {/* <Footer /> */}
           </NextIntlClientProvider>
         </ThemeProvider>

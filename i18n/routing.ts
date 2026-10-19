@@ -5,7 +5,7 @@ export const routing = defineRouting({
   locales: ['en', 'pt', 'es'],
 
   // Used when no locale matches
-  defaultLocale: 'en',
+  defaultLocale: 'pt',
 
   // The locale prefix for URLs (always show locale in URL)
   localePrefix: 'always',
@@ -16,6 +16,6 @@ export const routing = defineRouting({
       en: '/clause-4-4-11',
       pt: '/clausula-4-4-11',
       es: '/clausula-4-4-11',
-    }
+    },
   },
 })

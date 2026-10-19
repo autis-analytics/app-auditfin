@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
+import SectionHeading from '@/components/my-components/section-heading'
 
 const items = [
   {
@@ -59,14 +60,14 @@ const items = [
   },
 ]
 
-export default function Fag() {
+export default function Faq() {
   return (
-    <div id='faq' className='space-y-8'>
-      <div className='bg-[url("/images/section-faq.jpg")] bg-cover bg-center bg-no-repeat h-64 flex justify-center items-center'>
-        <h2 className='text-3xl md:text-4xl font-bold tracking-tight text-white drop-shadow-md'>
-          Dúvidas Frequentes
-        </h2>
-      </div>
+    <div id='faq' className='audit-section space-y-8' tabIndex={-1}>
+      <SectionHeading
+        number='05'
+        eyebrow='ENTENDA A AUDITORIA'
+        title='Dúvidas frequentes'
+      />
       <div className='content-container space-y-6'>
         <Accordion type='single' collapsible className='w-full'>
           {items.map((item) => (

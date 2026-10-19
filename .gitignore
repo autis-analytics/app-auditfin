@@ -42,3 +42,6 @@ next-env.d.ts
 
 #claude
 .claude
+
+# Isolated preview session and browser artifacts
+/.preview-session/
