@@ -30,7 +30,12 @@ export default function AccessibilityTools() {
   return (
     <div className='accessibility-tools'>
       <a href='#conteudo'>Ir para o conteúdo</a>
-      <button type='button' onClick={toggleContrast} aria-pressed={contrast}>
+      <button
+        type='button'
+        onClick={toggleContrast}
+        aria-pressed={contrast}
+        title='Alternar alto contraste'
+      >
         <Contrast size={14} aria-hidden='true' /> Alto contraste
       </button>
     </div>

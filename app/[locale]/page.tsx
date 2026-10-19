@@ -6,11 +6,19 @@ import TermsOfUse from './_components/terms-of-use'
 import Faq from './_components/faq'
 import PortalIntro from './_components/portal-intro'
 import SectionIndex from '@/components/my-components/section-index'
+import PortalSearch from '@/components/my-components/portal-search'
 
 const HomePage = () => {
   return (
     <>
       <PortalIntro />
+      <div className='content-guide portal-container'>
+        <div>
+          <p className='eyebrow'>ACORDO, AUDITORIA E INFORMAÇÕES</p>
+          <h2>Conteúdo do portal</h2>
+        </div>
+        <PortalSearch />
+      </div>
       <div className='portal-container reading-layout'>
         <SectionIndex />
         <div className='reading-content'>

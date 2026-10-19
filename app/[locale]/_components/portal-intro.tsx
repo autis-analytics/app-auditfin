@@ -1,40 +1,29 @@
 import Image from 'next/image'
-import {
-  ArrowRight,
-  ArrowUpRight,
-  ChartNoAxesCombined,
-  ChevronRight,
-  ClipboardCheck,
-  FileText,
-  Home,
-  Info,
-  Landmark,
-} from 'lucide-react'
-import PortalSearch from '@/components/my-components/portal-search'
+import { ArrowDown, ArrowRight, ArrowUpRight, FileText } from 'lucide-react'
 
 const auditScopes = [
   {
-    icon: ClipboardCheck,
+    number: '01',
     title: 'Estruturas de apoio e assessorias',
     reference: 'Cláusula 4.4.11',
     description:
-      'Consulte a destinação dos recursos e a prestação de contas das estruturas de apoio, ATIs e CAMF.',
+      'Destinação dos recursos e prestação de contas das estruturas de apoio, ATIs e CAMF.',
     href: '#audit-of-obligations',
   },
   {
-    icon: ChartNoAxesCombined,
+    number: '02',
     title: 'Projetos das comunidades atingidas',
     reference: 'Anexo I.1',
     description:
-      'Acompanhe a auditoria das Assessorias Técnicas Independentes no âmbito do Anexo I.1 do Acordo.',
+      'Atuação das Assessorias Técnicas Independentes no âmbito do Anexo I.1 do Acordo.',
     href: '#annex-i1-audit',
   },
   {
-    icon: Landmark,
+    number: '03',
     title: 'Obrigações de pagar da Vale',
     reference: 'Obrigações financeiras',
     description:
-      'Conheça as verificações dos pagamentos, prazos e valores previstos no Acordo Judicial.',
+      'Verificação dos pagamentos, prazos e valores previstos no Acordo Judicial.',
     href: '#vale-financial-audit',
   },
 ]
@@ -42,25 +31,70 @@ const auditScopes = [
 export default function PortalIntro() {
   return (
     <>
-      <section
-        className='portal-intro portal-container'
-        aria-labelledby='portal-title'
-      >
-        <nav className='breadcrumb' aria-label='Localização'>
-          <a href='#inicio' aria-label='Início'>
-            <Home size={15} aria-hidden='true' />
-          </a>
-          <ChevronRight size={14} aria-hidden='true' />
-          <span>Portal de Auditoria Financeira</span>
-        </nav>
-        <div className='page-introduction'>
-          <h1 id='portal-title'>Portal de Auditoria Financeira</h1>
-          <p>
-            Acompanhe a auditoria independente dos recursos destinados à
-            reparação de Brumadinho e da bacia do Paraopeba.
-          </p>
+      <section className='executive-opening' aria-labelledby='portal-title'>
+        <div className='portal-container cover-introduction'>
+          <div className='cover-heading'>
+            <p className='eyebrow'>PORTAL DE AUDITORIA FINANCEIRA</p>
+            <h1 id='portal-title'>
+              Auditoria financeira
+              <br className='desktop-break' /> do Acordo de Reparação.
+            </h1>
+          </div>
+          <div className='cover-summary'>
+            <p className='territory-label'>Brumadinho e bacia do Paraopeba</p>
+            <p>
+              Conheça o trabalho da auditoria independente e acompanhe as
+              verificações dos recursos destinados à reparação.
+            </p>
+            <a className='primary-link' href='#audit-results'>
+              Consultar as auditorias <ArrowDown size={17} aria-hidden='true' />
+            </a>
+          </div>
         </div>
-        <PortalSearch />
+        <div className='cover-panorama'>
+          <Image
+            src='/images/Capa_Cor.png'
+            alt=''
+            fill
+            priority
+            sizes='100vw'
+            className='cover-photograph'
+          />
+          <div className='portal-container panorama-caption'>
+            <span>Imagem do acervo do portal</span>
+            <a href='#reparation-agreement'>
+              Conheça o acordo <ArrowUpRight size={16} aria-hidden='true' />
+            </a>
+          </div>
+        </div>
+        <div className='agreement-context-strip'>
+          <dl className='portal-container agreement-facts'>
+            <div>
+              <dt>Abrangência territorial</dt>
+              <dd>
+                26 <span>municípios</span>
+              </dd>
+            </div>
+            <div>
+              <dt>Organização do território</dt>
+              <dd>
+                5 <span>regiões</span>
+              </dd>
+            </div>
+            <div>
+              <dt>Auditoria financeira</dt>
+              <dd>
+                3 <span>frentes de atuação</span>
+              </dd>
+            </div>
+            <div>
+              <dt>Homologação do Acordo</dt>
+              <dd className='fact-date'>
+                04 <span>fev.</span> 2021
+              </dd>
+            </div>
+          </dl>
+        </div>
       </section>
 
       <section
@@ -70,96 +104,68 @@ export default function PortalIntro() {
         aria-labelledby='audit-directory-title'
       >
         <div className='directory-intro'>
-          <h2 id='audit-directory-title'>O que você deseja consultar?</h2>
-          <p>Conheça as três frentes da auditoria financeira independente.</p>
+          <p className='eyebrow'>ESCOPO DA AUDITORIA</p>
+          <h2 id='audit-directory-title'>Frentes de atuação</h2>
+          <p>
+            Consulte o escopo, as responsabilidades e os resultados de cada
+            frente.
+          </p>
         </div>
-        <div className='service-grid'>
-          {auditScopes.map((scope) => (
-            <a className='service-card' href={scope.href} key={scope.href}>
-              <scope.icon size={42} strokeWidth={1.7} aria-hidden='true' />
-              <span className='service-reference'>{scope.reference}</span>
-              <h3>{scope.title}</h3>
-              <p>{scope.description}</p>
-              <span className='service-action'>
-                Consultar auditoria <ArrowRight size={18} aria-hidden='true' />
-              </span>
+        <div className='directory-layout'>
+          <div className='mandate-list'>
+            {auditScopes.map((scope) => (
+              <a className='mandate-link' href={scope.href} key={scope.href}>
+                <span className='mandate-number' aria-hidden='true'>
+                  {scope.number}
+                </span>
+                <div className='mandate-copy'>
+                  <span className='mandate-reference'>{scope.reference}</span>
+                  <h3>{scope.title}</h3>
+                  <p>{scope.description}</p>
+                </div>
+                <span className='mandate-action'>
+                  <span>Consultar</span>
+                  <ArrowRight size={20} aria-hidden='true' />
+                </span>
+              </a>
+            ))}
+          </div>
+          <aside
+            className='agreement-document'
+            aria-labelledby='agreement-document-title'
+          >
+            <div className='document-meta'>
+              <FileText size={24} strokeWidth={1.3} aria-hidden='true' />
+              <span>DOCUMENTO DE REFERÊNCIA</span>
+            </div>
+            <h3 id='agreement-document-title'>
+              Acordo Judicial de Reparação Integral
+            </h3>
+            <p>
+              Consulte o documento que estabelece as obrigações e os
+              compromissos de reparação.
+            </p>
+            <dl>
+              <div>
+                <dt>Homologação</dt>
+                <dd>04 de fevereiro de 2021</dd>
+              </div>
+              <div>
+                <dt>Arquivo</dt>
+                <dd>PDF · 735 KB</dd>
+              </div>
+            </dl>
+            <a href='/ajri.pdf' target='_blank' rel='noopener noreferrer'>
+              Acessar o Acordo <ArrowUpRight size={17} aria-hidden='true' />
+              <span className='sr-only'> (PDF, abre em nova aba)</span>
             </a>
-          ))}
+          </aside>
         </div>
         <p className='directory-note'>
-          <Info size={18} aria-hidden='true' />
-          <span>
-            As informações se referem ao escopo da auditoria financeira
-            independente realizada pela EY.{' '}
-            <a href='#limits-of-action'>Conheça os limites de atuação.</a>
-          </span>
+          As informações se referem ao escopo da auditoria financeira
+          independente realizada pela EY.{' '}
+          <a href='#limits-of-action'>Conheça os limites de atuação.</a>
         </p>
-      </section>
-
-      <section
-        className='agreement-overview portal-container'
-        aria-labelledby='agreement-overview-title'
-      >
-        <div className='agreement-banner'>
-          <Image
-            src='/images/Capa_Cor.png'
-            alt=''
-            fill
-            sizes='(max-width: 1200px) 100vw, 1200px'
-            className='agreement-background'
-          />
-          <div className='agreement-banner-content'>
-            <p>Acordo Judicial de Reparação Integral</p>
-            <h2 id='agreement-overview-title'>
-              Informação para acompanhar a reparação.
-            </h2>
-            <a href='#reparation-agreement'>
-              Entenda o acordo <ArrowRight size={18} aria-hidden='true' />
-            </a>
-          </div>
-        </div>
-        <dl className='agreement-facts'>
-          <div>
-            <dt>
-              municípios abrangidos
-              <span>Brumadinho e outros 25 municípios</span>
-            </dt>
-            <dd>26</dd>
-          </div>
-          <div>
-            <dt>
-              regiões de atuação<span>Organização territorial do Acordo</span>
-            </dt>
-            <dd>5</dd>
-          </div>
-          <div>
-            <dt>
-              frentes de auditoria<span>Escopo da auditoria financeira</span>
-            </dt>
-            <dd>3</dd>
-          </div>
-          <div>
-            <dt>
-              homologação do Acordo
-              <span>Acordo Judicial de Reparação Integral</span>
-            </dt>
-            <dd className='fact-date'>04/02/2021</dd>
-          </div>
-        </dl>
-        <a
-          className='agreement-download'
-          href='/ajri.pdf'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <FileText size={22} aria-hidden='true' />
-          <span>
-            <strong>Acordo Judicial na íntegra</strong>
-            <span>Consulte o documento e seus anexos · PDF, 735 KB</span>
-          </span>
-          <ArrowUpRight size={20} aria-hidden='true' />
-          <span className='sr-only'> (abre em nova aba)</span>
-        </a>
       </section>
     </>
   )

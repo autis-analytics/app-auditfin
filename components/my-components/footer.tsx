@@ -28,8 +28,8 @@ export default function Footer() {
             <Image
               src='/EY_Logo.png'
               alt='EY'
-              width={39}
-              height={43}
+              width={112}
+              height={118}
               className='object-contain'
             />
             <span>Auditoria independente realizada pela EY.</span>

@@ -17,7 +17,7 @@ const topics = [
     description:
       'Recursos e prestação de contas das estruturas de apoio, ATIs e CAMF.',
     keywords:
-      'cláusula 4.4.11 obrigações estruturas apoio camf atis assessorias técnicas independentes prestação contas relatório relatórios painel painéis financeiro',
+      'auditoria financeira cláusula 4.4.11 obrigações estruturas apoio camf atis assessorias técnicas independentes prestação contas relatório relatórios painel painéis financeiro power bi',
   },
   {
     id: 'annex-i1-audit',
@@ -25,7 +25,7 @@ const topics = [
     description:
       'Atuação das Assessorias Técnicas Independentes no âmbito do Anexo I.1.',
     keywords:
-      'anexo i.1 i1 projetos comunidades atingidas atis assessorias técnicas independentes relatório relatórios painel painéis',
+      'auditoria financeira anexo i.1 i1 projetos comunidades atingidas atis assessorias técnicas independentes relatório relatórios painel painéis power bi',
   },
   {
     id: 'vale-financial-audit',
@@ -33,7 +33,7 @@ const topics = [
     description:
       'Verificação dos pagamentos, prazos e valores previstos no Acordo.',
     keywords:
-      'vale financeira pagamentos pagar valores prazos relatório relatórios painel painéis',
+      'auditoria financeira vale pagamentos pagar valores prazos relatório relatórios painel painéis power bi',
   },
   {
     id: 'faq',
@@ -95,7 +95,16 @@ export default function PortalSearch() {
   }
 
   return (
-    <div className='portal-search'>
+    <div
+      className='portal-search'
+      onKeyDown={(event) => {
+        if (event.key === 'Escape' && submitted !== null) {
+          event.preventDefault()
+          setSubmitted(null)
+          document.getElementById(inputId)?.focus()
+        }
+      }}
+    >
       <div className='search-surface'>
         <form role='search' aria-label='Buscar no portal' onSubmit={search}>
           <label className='sr-only' htmlFor={inputId}>
@@ -104,7 +113,7 @@ export default function PortalSearch() {
           <input
             id={inputId}
             type='search'
-            placeholder='Buscar por assunto ou seção'
+            placeholder='Localizar um assunto no portal'
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             autoComplete='off'
@@ -159,12 +168,6 @@ export default function PortalSearch() {
           )}
         </section>
       ) : null}
-      <nav className='search-shortcuts' aria-label='Acesso rápido'>
-        <span>Acesso rápido:</span>
-        <a href='#reparation-agreement'>O acordo</a>
-        <a href='#audit-results'>Painéis de auditoria</a>
-        <a href='#faq'>Dúvidas frequentes</a>
-      </nav>
     </div>
   )
 }

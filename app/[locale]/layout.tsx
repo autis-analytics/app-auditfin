@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
-import { Roboto_Mono } from 'next/font/google'
+import { Source_Sans_3, Source_Serif_4 } from 'next/font/google'
 import './globals.css'
 import './portal.css'
 import Header from '@/components/my-components/header'
@@ -15,42 +14,16 @@ import Footer from '@/components/my-components/footer'
 import GoogleAnalytics from '@/components/my-components/google-analytics'
 // import Footer from '@/components/my-components/footer'
 
-const rawline = localFont({
-  variable: '--font-rawline',
+const sourceSans = Source_Sans_3({
+  variable: '--font-source-sans',
+  subsets: ['latin'],
   display: 'swap',
-  src: [
-    {
-      path: '../../public/fonts/rawline/rawline-400.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/rawline/rawline-400i.woff2',
-      weight: '400',
-      style: 'italic',
-    },
-    {
-      path: '../../public/fonts/rawline/rawline-500.woff2',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/rawline/rawline-600.woff2',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/rawline/rawline-700.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
 })
 
-const robotoMono = Roboto_Mono({
-  variable: '--font-roboto-mono',
+const sourceSerif = Source_Serif_4({
+  variable: '--font-source-serif',
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700'],
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -99,7 +72,7 @@ const RootLayout = async ({
   return (
     <html lang={locale} suppressHydrationWarning data-lt-installed>
       <body
-        className={`${rawline.variable} ${robotoMono.variable} antialiased flex flex-col min-h-screen`}
+        className={`${sourceSans.variable} ${sourceSerif.variable} antialiased flex flex-col min-h-screen`}
       >
         <ThemeProvider attribute='class' forcedTheme='light'>
           <NextIntlClientProvider locale={locale} messages={messages}>

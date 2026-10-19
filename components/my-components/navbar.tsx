@@ -18,9 +18,13 @@ export default function Navbar() {
     let frame = 0
     function update() {
       let current = 'inicio'
-      for (const section of portalSections) {
+      const activationLine =
+        (parseFloat(
+          getComputedStyle(document.documentElement).scrollPaddingTop,
+        ) || 100) + 36
+      for (const section of [{ id: 'audit-results' }, ...portalSections]) {
         const element = document.getElementById(section.id)
-        if (element && element.getBoundingClientRect().top <= 145)
+        if (element && element.getBoundingClientRect().top <= activationLine)
           current = section.id
       }
       setActive(current)
@@ -39,14 +43,28 @@ export default function Navbar() {
     }
   }, [])
 
-  const links = [
+  const mobileLinks = [
     { id: 'inicio', short: 'Início' },
+    { id: 'audit-results', short: 'Frentes de auditoria' },
     ...portalSections.filter((s) => s.id !== 'terms-of-use'),
   ]
+  const desktopLinks = [
+    { id: 'inicio', short: 'Visão geral' },
+    { id: 'reparation-agreement', short: 'O acordo' },
+    { id: 'audit-results', short: 'Auditorias' },
+    { id: 'faq', short: 'Dúvidas' },
+  ]
+  const desktopActive = [
+    'audit-of-obligations',
+    'annex-i1-audit',
+    'vale-financial-audit',
+  ].includes(active)
+    ? 'audit-results'
+    : active
 
   return (
     <nav className='site-nav' aria-label='Navegação principal'>
-      <div className='portal-container nav-inner'>
+      <div className='nav-inner'>
         <Popover open={open} onOpenChange={setOpen}>
           <PopoverTrigger asChild>
             <button
@@ -75,7 +93,7 @@ export default function Navbar() {
               )
             }}
           >
-            {links.map((link) => (
+            {mobileLinks.map((link) => (
               <a
                 key={link.id}
                 href={`#${link.id}`}
@@ -100,11 +118,11 @@ export default function Navbar() {
           </PopoverContent>
         </Popover>
         <div className='desktop-navigation'>
-          {links.map((link) => (
+          {desktopLinks.map((link) => (
             <a
               key={link.id}
               href={`#${link.id}`}
-              aria-current={active === link.id ? 'location' : undefined}
+              aria-current={desktopActive === link.id ? 'location' : undefined}
             >
               {link.short}
             </a>
@@ -116,7 +134,7 @@ export default function Navbar() {
           target='_blank'
           rel='noopener noreferrer'
         >
-          Acordo na íntegra <ArrowUpRight size={16} aria-hidden='true' />
+          Acordo em PDF <ArrowUpRight size={16} aria-hidden='true' />
           <span className='sr-only'> (PDF, abre em nova aba)</span>
         </a>
       </div>

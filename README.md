@@ -1,21 +1,20 @@
-# Portal de Auditoria Financeira — proposta institucional
+# Portal de Auditoria Financeira — proposta executiva
 
 Versão de avaliação na branch `design/portal-institucional-20261019`, baseada em `b86f150` da `origin/main`. Sessão: `auditfin-redesign-20261019`; responsável: Codex / Arthur Autis. Desenvolvimento em worktree própria, com estado e navegador em `.preview-session/` (ignorado pelo Git). Publicação exclusivamente como Preview pela integração existente do repositório com o projeto `app-auditfin`, equipe `autis-analytics-projects`.
 
 ## Direção de UI/UX
 
-Página única inspirada no portal GOV.BR: Rawline, azul de ação `#1351B4`, azul escuro `#0C326F`, superfícies brancas e texto `#333333`. A abertura privilegia a consulta: título direto, busca por seções e três acessos às frentes da auditoria. A fotografia do acervo acompanha o contexto do Acordo em uma faixa secundária. A leitura extensa usa títulos simples e índice lateral. Menu móvel, atalhos, foco de teclado, alto contraste persistente e respeito à preferência de movimento reduzido.
+Página única com apresentação de relatório corporativo. A paleta recupera o grafite `#2E2E38` e o petróleo `#2E525A` do projeto original, sobre branco e cinza claro. Source Serif 4 nos títulos principais e Source Sans 3 nos textos e controles. Cabeçalho compacto, capa factual, fotografia panorâmica do acervo, metadados do Acordo e índice visível das três frentes. PDF identificado por título, data e tamanho. A marca EY aparece somente no rodapé. Menu móvel, foco de teclado, alto contraste persistente e respeito à preferência de movimento reduzido.
 
-A busca é local e indexa as seis seções do portal por título, descrição e assuntos relacionados; não pesquisa o conteúdo dos PDFs nem os dados externos do Power BI. Tem suporte a termos sem acentos, estado sem resultados e navegação de teclado até a seção encontrada. Rawline é servida localmente, com arquivos do CDN oficial SERPRO e licença SIL Open Font License em `public/fonts/rawline/OFL.txt`.
+A busca compacta acompanha o início dos capítulos e indexa as seis seções por título, descrição e assuntos relacionados; não pesquisa o conteúdo dos PDFs nem os dados externos do Power BI. Tem suporte a termos sem acentos, estado sem resultados e navegação de teclado até a seção encontrada. Fontes distribuídas pelo Next.js com `next/font`, sem requisições de fontes a terceiros na visita.
 
 Referências estudadas:
 
-- [Design System gov.br](https://www.gov.br/ds) e [repositório SERPRO](https://github.com/serpro-brasil/GOVBR-DS): consistência, acessibilidade e navegação institucional.
-- [Portal GOV.BR](https://www.gov.br/pt-br/), [template Base](https://www.gov.br/ds/templates/base) e [biblioteca React oficial](https://gitlab.com/govbr-ds/bibliotecas/react-components): busca, atalhos de serviço, hierarquia e fonte Rawline. Componentes implementados com a estrutura Next.js existente.
-- [Serviços da Câmara](https://www.camara.leg.br/servicos) e [TCU](https://www.tcu.gov.br/): navegação por assunto e acessos orientados à tarefa.
-- [Portal da Transparência / CGU](https://portaldatransparencia.gov.br/): consultas por assunto e separação entre contexto e dados.
-- [Pró-Brumadinho / Governo de Minas Gerais](https://www.mg.gov.br/pro-brumadinho): organização do contexto do acordo, anexos e obrigações.
-- [Dados Abertos da Câmara](https://dadosabertos.camara.leg.br/): apresentação orientada às tarefas do visitante.
+- [BCG](https://www.bcg.com/): referência visual de tipografia editorial em contexto corporativo; não foram adotadas sua marca nem suas fontes proprietárias.
+- [Brookfield Corporation / RI](https://bn.brookfield.com/) e [centro de documentos](https://bn.brookfield.com/reports-filings/investor-documents-center): referências de hierarquia entre apresentação institucional e consulta documental.
+- [BNDES / Relatório Anual Integrado 2025](https://www.bndes.gov.br/hotsites/Relatorio_Anual_2025/): organização de relato, contexto e prestação de contas.
+- [Carbon / IBM](https://github.com/carbon-design-system/carbon): referência de grid, controles e legibilidade em sistemas empresariais. Implementação mantida na estrutura Next.js existente, sem instalar Carbon.
+- [Source Serif / Adobe](https://github.com/adobe-fonts/source-serif) e [Source Sans / Adobe](https://github.com/adobe-fonts/source-sans): par tipográfico com funções separadas para títulos editoriais e leitura de documentos.
 - [Anti-slop design](https://github.com/Cuuper22/anti-slop-design) e [Unslop UI / catálogo](https://github.com/claudiusararu/unslop-ui-skill/blob/main/TELLS.md): revisão de padrões genéricos, repetição visual, contraste e linguagem. Consultados como referências; nenhum código ou pacote desses projetos foi incorporado.
 
 A identidade é própria do portal. Textos jurídicos, ressalvas, nota de rodapé, oito perguntas frequentes, PDF e seis fontes Power BI foram preservados. Os painéis passam a carregar mediante solicitação e oferecem abertura externa. A lista de documentos continua respeitando `public/config.json` (`showDocuments: false`); documentos de teste não foram expostos. O português passa a ser o idioma padrão; as rotas de idioma existentes foram mantidas.
