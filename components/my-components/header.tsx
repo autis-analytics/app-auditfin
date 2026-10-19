@@ -23,8 +23,8 @@ const Header = () => {
         <div className='absolute inset-0 bg-black/20' aria-hidden='true' />
 
         {/* Text content - Overlaid card */}
-        <div className='absolute inset-0 flex items-start pt-4 md:pt-12 px-2 md:px-6 xl:px-12'>
-          <div className='bg-transparent max-w-2xl'>
+        <div className='absolute inset-0 pt-4 md:pt-12'>
+          <div className='content-container'>
             <h1 className='text-3xl sm:text-4xl font-bold tracking-tight text-white drop-shadow-md'>
               {t('title')}
             </h1>

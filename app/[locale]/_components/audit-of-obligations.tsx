@@ -1,13 +1,11 @@
 import PowerBiView from '@/components/my-components/power-bi-view'
 import Image from 'next/image'
 import { ExpandableCard } from '@/components/my-components/expandable-card'
-import { PlusIcon } from 'lucide-react'
-import * as AccordionPrimitive from '@radix-ui/react-accordion'
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-} from '@/components/ui/accordion'
+  AuditResults,
+  RolesAccordion,
+  type AuditRole,
+} from '@/components/my-components/audit-roles'
 
 const participationInformedPowerBiUrl =
   'https://app.powerbi.com/view?r=eyJrIjoiNTI0YjhlM2QtNGM5NS00OTIwLWFiYmMtZTBkZmQxZjBiYmJmIiwidCI6IjViOTczZjk5LTc3ZGYtNGJlYi1iMjdkLWFhMGM3MGI4NDgyYyIsImMiOjh9'
@@ -15,7 +13,7 @@ const participationInformedPowerBiUrl =
 const camfPowerBiUrl =
   'https://app.powerbi.com/view?r=eyJrIjoiNTRlYWU2MGItZDg3NC00NDE4LWIzOWMtNDVkNjBiYzc0ZjViIiwidCI6IjViOTczZjk5LTc3ZGYtNGJlYi1iMjdkLWFhMGM3MGI4NDgyYyIsImMiOjh9'
 
-const roles = [
+const roles: AuditRole[] = [
   {
     id: 'justice-institutions',
     title: 'Instituições de Justiça (IJs)',
@@ -81,48 +79,6 @@ const roles = [
     ),
   },
 ]
-
-function RolesAccordion() {
-  return (
-    <div className='space-y-4'>
-      <h2 className='text-xl font-bold text-foreground'>
-        Papéis e Responsabilidades
-      </h2>
-      <Accordion type='single' collapsible className='w-full'>
-        {roles.map((role) => (
-          <AccordionItem value={role.id} key={role.id} className='py-2'>
-            <AccordionPrimitive.Header className='flex'>
-              <AccordionPrimitive.Trigger className='text-foreground focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-center justify-between gap-4 py-2 text-left text-[15px] leading-6 font-semibold transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&>svg]:stroke-primary [&>svg]:opacity-100 [&>svg]:transition-transform [&>svg]:duration-200 [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg]:rotate-180 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0'>
-                {role.title}
-                <PlusIcon
-                  size={16}
-                  className='pointer-events-none shrink-0'
-                  aria-hidden='true'
-                />
-              </AccordionPrimitive.Trigger>
-            </AccordionPrimitive.Header>
-            <AccordionContent className='text-muted-foreground pb-2'>
-              {role.content}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-    </div>
-  )
-}
-
-function AuditResults({ title, src }: { title: string; src: string }) {
-  return (
-    <div className='space-y-4 pt-2'>
-      <p className='font-medium text-foreground'>
-        Os resultados obtidos pela auditoria são apresentados abaixo:
-      </p>
-      <div className='mx-auto w-full max-w-[600px] overflow-hidden border border-zinc-300 bg-zinc-50 p-2 shadow-md'>
-        <PowerBiView title={title} src={src} width={600} height={373.5} />
-      </div>
-    </div>
-  )
-}
 
 export default function AuditOfObligations() {
   return (
@@ -216,12 +172,12 @@ export default function AuditOfObligations() {
                 comprovantes bancários.
               </li>
             </ul>
-            <div className='mx-auto my-6 w-full max-w-5xl overflow-hidden border border-zinc-300 bg-zinc-50 p-2 shadow-md'>
+            <div className='my-6'>
               <PowerBiView
                 title='Cláusula 4.4.11'
                 src='https://app.powerbi.com/view?r=eyJrIjoiMWJlYTE5YzMtNzBmMS00ZjdkLWI4MDctMjllZTI0MjMzNTIxIiwidCI6IjViOTczZjk5LTc3ZGYtNGJlYi1iMjdkLWFhMGM3MGI4NDgyYyIsImMiOjh9'
-                width={1100}
-                height={620}
+                width={1280}
+                height={721}
               />
             </div>
             <p>
@@ -293,7 +249,7 @@ export default function AuditOfObligations() {
           className='bg-zinc-200'
         >
           <div className='space-y-8'>
-            <RolesAccordion />
+            <RolesAccordion roles={roles} />
             <AuditResults
               title='Prestação de Contas - Participação Informada'
               src={participationInformedPowerBiUrl}

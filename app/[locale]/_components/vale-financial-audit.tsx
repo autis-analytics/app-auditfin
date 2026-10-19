@@ -86,13 +86,7 @@ export default function ValeFinancialAudit() {
       </div>
       <div className='content-container space-y-10'>
         <div className='space-y-6'>
-          <div className='inline-flex items-end gap-4 border-b-4 pb-2 border-[#2e525a] pr-10'>
-            <Image
-              src='/icons/iconContextualizacao.png'
-              alt='Ícone Acordo de Reparação'
-              width={60}
-              height={60}
-            />
+          <div className='inline-flex border-b-4 pb-2 border-[#2e525a] pr-10'>
             <h2 className='text-2xl md:text-3xl font-semibold tracking-tight'>
               Contextualização
             </h2>
@@ -140,12 +134,12 @@ export default function ValeFinancialAudit() {
           <p className='text-muted-foreground text-base md:text-lg leading-relaxed'>
             Abaixo são apresentados os resultados dessa verificação:
           </p>
-          <div className='mx-auto my-6 w-full max-w-5xl overflow-hidden border border-zinc-300 bg-zinc-50 p-2 shadow-md'>
+          <div className='my-6'>
             <PowerBiView
               title='Escopo D'
               src='https://app.powerbi.com/view?r=eyJrIjoiMmI3OGYxNzMtYmE4NS00ZTNiLWI0N2EtZjBmYjgzODYyYThlIiwidCI6IjViOTczZjk5LTc3ZGYtNGJlYi1iMjdkLWFhMGM3MGI4NDgyYyIsImMiOjh9'
-              width={1100}
-              height={620}
+              width={1280}
+              height={721}
             />
           </div>
         </div>

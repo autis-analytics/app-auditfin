@@ -46,7 +46,7 @@ function MobileMenu({
       <PopoverTrigger asChild>
         <Button
           aria-label={open ? t('closeMenu') : t('openMenu')}
-          className='group size-8 xl:hidden transition-colors text-background hover:bg-[#1a1a24] hover:text-background'
+          className='group size-8 lg:hidden transition-colors text-background hover:bg-[#1a1a24] hover:text-background'
           variant='ghost'
           size='icon'
         >
@@ -81,7 +81,7 @@ function MobileMenu({
       </PopoverTrigger>
       <PopoverContent
         align='start'
-        className='w-72 p-1 xl:hidden text-left bg-primary text-background'
+        className='w-72 p-1 lg:hidden text-left bg-primary text-background'
         onCloseAutoFocus={(event) => {
           if (!selectedSection.current) return
 
@@ -140,16 +140,22 @@ function DesktopMenu({
   activeHash: string
 }) {
   return (
-    <NavigationMenu viewport={false} className='max-xl:hidden'>
-      <NavigationMenuList className='gap-1'>
+    // Rótulos longos quebram em até duas linhas balanceadas quando falta
+    // espaço (1024–1600px); o item ativo só muda cor e sublinhado, sem alterar
+    // tamanho, para que os itens nunca fiquem desalinhados.
+    <NavigationMenu
+      viewport={false}
+      className='max-lg:hidden min-w-0 flex-1 max-w-none *:w-full'
+    >
+      <NavigationMenuList className='w-full justify-start gap-1'>
         {navigationLinks.map((link, index) => (
-          <NavigationMenuItem key={index}>
+          <NavigationMenuItem key={index} className='min-w-0 xl:flex-1'>
             <NavigationMenuLink
               href={link.href}
               className={cn(
-                'relative px-2 py-2 font-medium text-center text-sm leading-tight rounded-md text-background transition-all hover:bg-[#1a1a24] hover:text-background',
+                'flex min-h-13 w-full items-center justify-center rounded-none border-b-4 border-transparent px-2.5 py-1.5 text-center text-[13px] font-medium leading-tight text-balance text-background transition-colors hover:bg-[#1a1a24] hover:text-background xl:text-sm',
                 isLinkActive(pathname, activeHash, link.href) &&
-                  'font-semibold bg-[#1a1a24] border-b-4 border-zinc-400 scale-108',
+                  'bg-[#1a1a24] border-zinc-400',
               )}
             >
               {link.label}
@@ -279,10 +285,10 @@ export default function Navbar() {
   }, [activeHash, pathname])
 
   return (
-    <nav className='border-b border-transparent px-4 md:px-6 bg-[#2e2e38] text-background'>
-      <div className='max-w-[90rem] mx-auto flex min-h-16 items-center justify-between gap-4'>
+    <nav className='border-b border-transparent bg-[#2e2e38] text-background'>
+      <div className='content-container flex min-h-16 items-center justify-between gap-4 py-2'>
         {/* Navegação */}
-        <div className='flex items-center gap-2'>
+        <div className='flex min-w-0 flex-1 items-center gap-2'>
           {/* Mobile */}
           <MobileMenu
             navigationLinks={navigationLinks}
@@ -299,7 +305,7 @@ export default function Navbar() {
         </div>
 
         {/* Ações */}
-        <div className='flex items-center gap-2'>
+        <div className='flex shrink-0 items-center gap-2'>
           <Button
             onClick={() => window.open('/ajri.pdf', '_blank')}
             className='duration-200 hover:scale-105 text-black bg-white hover:bg-white'

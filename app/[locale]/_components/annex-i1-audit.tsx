@@ -1,17 +1,14 @@
 import Image from 'next/image'
-import PowerBiView from '@/components/my-components/power-bi-view'
-import { PlusIcon } from 'lucide-react'
-import * as AccordionPrimitive from '@radix-ui/react-accordion'
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-} from '@/components/ui/accordion'
+  AuditResults,
+  RolesAccordion,
+  type AuditRole,
+} from '@/components/my-components/audit-roles'
 
 const annexI1PowerBiUrl =
   'https://app.powerbi.com/view?r=eyJrIjoiNGFlMWM5ZGItNmVkMC00MmFmLWI3ZTEtM2I5YzMwYjNjYmQ5IiwidCI6IjViOTczZjk5LTc3ZGYtNGJlYi1iMjdkLWFhMGM3MGI4NDgyYyIsImMiOjh9'
 
-const roles = [
+const roles: AuditRole[] = [
   {
     id: 'annex-justice-institutions',
     title: 'Instituições de Justiça (IJs)',
@@ -100,62 +97,29 @@ export default function AnnexI1Audit() {
       </div>
 
       <div className='content-container space-y-10'>
-        <div className='max-w-5xl space-y-6 text-base leading-relaxed text-muted-foreground md:text-lg'>
-          <p>
-            O Anexo I.1 do AJRI refere-se aos Projetos de Demandas das
-            Comunidades Atingidas, no valor nominal de R$ 3.000.000.000,00 (três
-            bilhões de reais), estabelecidos como modalidade de &ldquo;Obrigação
-            de Pagar&rdquo; da Vale S.A.
-          </p>
-          <p>
-            O referido Anexo contempla projetos a serem definidos pelas pessoas
-            atingidas das Regiões 1 a 5, bem como fundos de financiamento,
-            garantidores e equalizador voltados à diversificação econômica,
-            agropecuários e agroindustriais - Crédito e microcrédito. Conforme o
-            Termo de Compromisso, as ATIs devem prestar apoio técnico e
-            organizacional à execução das atividades aos Projetos de Demandas
-            das Comunidades Atingidas, em conformidade com as atividades
-            previstas no Quadro de Entregas e Prazos.
-          </p>
-        </div>
+        <p className='text-base leading-relaxed text-muted-foreground md:text-lg'>
+          O Anexo I.1 do AJRI refere-se aos Projetos de Demandas das Comunidades
+          Atingidas, no valor nominal de R$ 3.000.000.000,00 (três bilhões de
+          reais), estabelecidos como modalidade de &ldquo;Obrigação de
+          Pagar&rdquo; da Vale S.A.
+        </p>
+        <p className='text-base leading-relaxed text-muted-foreground md:text-lg'>
+          O referido Anexo contempla projetos a serem definidos pelas pessoas
+          atingidas das Regiões 1 a 5, bem como fundos de financiamento,
+          garantidores e equalizador voltados à diversificação econômica,
+          agropecuários e agroindustriais - Crédito e microcrédito. Conforme o
+          Termo de Compromisso, as ATIs devem prestar apoio técnico e
+          organizacional à execução das atividades aos Projetos de Demandas das
+          Comunidades Atingidas, em conformidade com as atividades previstas no
+          Quadro de Entregas e Prazos.
+        </p>
 
-        <div className='space-y-4'>
-          <h2 className='text-2xl font-bold tracking-tight md:text-3xl'>
-            Papéis e Responsabilidades
-          </h2>
-          <Accordion type='single' collapsible className='w-full'>
-            {roles.map((role) => (
-              <AccordionItem value={role.id} key={role.id} className='py-2'>
-                <AccordionPrimitive.Header className='flex'>
-                  <AccordionPrimitive.Trigger className='text-foreground focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-center justify-between gap-4 py-3 text-left text-[15px] leading-6 font-semibold transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&>svg]:stroke-primary [&>svg]:opacity-100 [&>svg]:transition-transform [&>svg]:duration-200 [&>svg>path:last-child]:origin-center [&>svg>path:last-child]:transition-all [&>svg>path:last-child]:duration-200 [&[data-state=open]>svg]:rotate-180 [&[data-state=open]>svg>path:last-child]:rotate-90 [&[data-state=open]>svg>path:last-child]:opacity-0'>
-                    {role.title}
-                    <PlusIcon
-                      size={16}
-                      className='pointer-events-none shrink-0'
-                      aria-hidden='true'
-                    />
-                  </AccordionPrimitive.Trigger>
-                </AccordionPrimitive.Header>
-                <AccordionContent className='text-base leading-relaxed text-muted-foreground md:text-lg'>
-                  {role.content}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-
-        <div className='space-y-4'>
-          <p className='font-medium text-foreground md:text-lg'>
-            Os resultados obtidos pela auditoria são apresentados abaixo:
-          </p>
-          <div className='mx-auto w-full max-w-[600px] overflow-hidden border border-zinc-300 bg-zinc-50 p-2 shadow-md'>
-            <PowerBiView
-              title='Prestação de Contas - Anexo I.1'
-              src={annexI1PowerBiUrl}
-              width={600}
-              height={373.5}
-            />
-          </div>
+        <div className='space-y-8 bg-zinc-200 p-6 shadow-md md:p-8'>
+          <RolesAccordion roles={roles} />
+          <AuditResults
+            title='Prestação de Contas - Anexo I.1'
+            src={annexI1PowerBiUrl}
+          />
         </div>
       </div>
     </section>
