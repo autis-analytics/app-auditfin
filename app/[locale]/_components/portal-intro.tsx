@@ -41,54 +41,51 @@ export default function PortalIntro() {
   return (
     <>
       <section className='portal-hero' aria-labelledby='portal-title'>
-        <div className='portal-container'>
-          <div className='breadcrumb' aria-label='Localização'>
-            <span>Início</span>
-            <span aria-hidden='true'>/</span>
-            <span>Portal de Auditoria Financeira</span>
-          </div>
-          <div className='hero-grid'>
-            <div className='hero-copy'>
-              <p className='eyebrow'>ACORDO JUDICIAL DE REPARAÇÃO INTEGRAL</p>
-              <h1 id='portal-title'>
-                Auditoria financeira
-                <br />
-                do Acordo de
-                <br />
-                <span>Reparação.</span>
-              </h1>
-              <p className='hero-description'>
-                Conheça o trabalho da auditoria independente e acompanhe as
-                verificações dos recursos destinados à reparação de Brumadinho e
-                da bacia do Paraopeba.
-              </p>
-              <div className='hero-actions'>
-                <a className='primary-link' href='#audit-results'>
-                  Consultar as auditorias{' '}
-                  <ArrowDown size={17} aria-hidden='true' />
-                </a>
-                <a className='text-link' href='#reparation-agreement'>
-                  Entenda o acordo <ArrowRight size={16} aria-hidden='true' />
-                </a>
+        <div className='hero-banner'>
+          <Image
+            src='/images/Capa_Cor.png'
+            alt=''
+            fill
+            priority
+            sizes='100vw'
+            className='hero-background'
+          />
+          <div className='hero-scrim' aria-hidden='true' />
+          <div className='portal-container hero-banner-content'>
+            <div className='breadcrumb' aria-label='Localização'>
+              <span>Início</span>
+              <span aria-hidden='true'>/</span>
+              <span>Portal de Auditoria Financeira</span>
+            </div>
+            <div className='hero-stage'>
+              <div className='hero-copy'>
+                <p className='eyebrow'>ACORDO JUDICIAL DE REPARAÇÃO INTEGRAL</p>
+                <h1 id='portal-title'>
+                  Auditoria financeira
+                  <br />
+                  do Acordo de
+                  <br />
+                  <span>Reparação.</span>
+                </h1>
+                <p className='hero-description'>
+                  Conheça o trabalho da auditoria independente e acompanhe as
+                  verificações dos recursos destinados à reparação de Brumadinho
+                  e da bacia do Paraopeba.
+                </p>
+                <div className='hero-actions'>
+                  <a className='primary-link' href='#audit-results'>
+                    Consultar as auditorias{' '}
+                    <ArrowDown size={17} aria-hidden='true' />
+                  </a>
+                  <a className='text-link' href='#reparation-agreement'>
+                    Entenda o acordo <ArrowRight size={16} aria-hidden='true' />
+                  </a>
+                </div>
               </div>
             </div>
-            <figure className='hero-visual'>
-              <div className='hero-photo'>
-                <Image
-                  src='/images/Capa_Cor.png'
-                  alt='Vista aérea de uma área de memória e paisagem no território de Brumadinho, imagem do acervo do portal'
-                  fill
-                  priority
-                  sizes='(max-width: 760px) 100vw, 46vw'
-                  className='object-cover'
-                />
-              </div>
-              <figcaption>
-                <span>Reparação integral</span>
-                <span>Brumadinho e bacia do Paraopeba</span>
-              </figcaption>
-            </figure>
           </div>
+        </div>
+        <div className='portal-container'>
           <dl className='agreement-facts'>
             <div>
               <dt>Municípios abrangidos</dt>
